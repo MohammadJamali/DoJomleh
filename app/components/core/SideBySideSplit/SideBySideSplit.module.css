@@ -1,0 +1,40 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 2rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    justify-content: left;
+    align-content: left;
+    align-items: center;
+}
+
+.rightSide {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.image {
+    border-radius: 3rem;
+    width: 100%;
+    padding: 24px;
+    background: #9000ff;
+    background: 
+    linear-gradient(90deg,#adadfb26 0%,
+     #adadfb00 100%);
+}
+
+.title {
+    font-size: 2em;
+    white-space: pre-wrap;
+}
+
+
+.description {
+    color: #737377;
+    font-size: 1.1em;
+    max-width: 600px;
+    white-space: pre-wrap;
+}

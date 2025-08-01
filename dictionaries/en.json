@@ -1,0 +1,93 @@
+{
+  "lang": "en",
+  "rtl": false,
+  "app": {
+    "name": "2Sentences (DoJomle)"
+  },
+  "callToAction": {
+    "header": {
+      "search": "Search",
+      "user": {
+        "profile": "Profile",
+        "settings": "Settings",
+        "darkTheme": "Dark theme",
+        "lightTheme": "Light theme",
+        "logout": "Logout"
+      }
+    },
+    "body": {
+      "slogan": "Even the longest contents can be",
+      "highlightedSlogan": "Summarized In 2Sentences",
+      "description": "Our AI extracts core ideas from Castbox podcasts, Telegram voice channels, and YouTube videos and other sources - saving you hours of listening time",
+      "actions": {
+        "cta": "Try It Free",
+        "more": "See How It Works"
+      }
+    },
+    "customerStories": {
+      "customerStory": "Customer Story",
+      "stories": [
+        {
+          "author": "Mohammad Jamali",
+          "title": "From hours to minutes with better retention",
+          "quote": "2Sentences saved me a lot of time! What used to take hours now takes minutes.",
+          "association": "CEO",
+          "avatar": "https://avatar.iran.liara.run/public"
+        },
+        {
+          "author": "Alex Rivera",
+          "title": "80% less prep time for podcast research",
+          "quote": "I manage 12+ hours of daily podcast research. 2Sentences cuts my prep time by 80% while ensuring I never miss key insights from competitors' shows.",
+          "association": "Podcast Producer",
+          "avatar": "https://avatar.iran.liara.run/public"
+        },
+        {
+          "author": "Nadia Petrova",
+          "title": "Doubled engagement with audio previews",
+          "quote": "Channel engagement doubled after introducing 2Sentences previews - subscribers now consume 30-minute voice notes more efficiently by reading the AI summaries first.",
+          "association": "Telegram Channel Owner",
+          "avatar": "https://avatar.iran.liara.run/public"
+        },
+        {
+          "author": "David Müller",
+          "title": "Real-time market insights without overload",
+          "quote": "In the fast-moving markets, 2Sentences gives me the competitive edge to stay informed without information overload.",
+          "association": "Financial Analyst",
+          "avatar": "https://avatar.iran.liara.run/public"
+        }
+      ]
+    }
+  },
+  "statistics": {
+    "title": "Transforming Content Consumption, Efficiency at Scale",
+    "description": "DoJomle revolutionizes how you consume digital content by distilling hours of audio/video into powerful 2-sentence insights",
+    "stats": [
+      {
+        "title": "1M+",
+        "label": "Summaries Generated"
+      },
+      {
+        "title": "5 Hours",
+        "label": "Time Saved Daily Per User"
+      },
+      {
+        "title": "3",
+        "label": "Content Sources"
+      },
+      {
+        "title": "4.9/5",
+        "label": "User Satisfaction"
+      }
+    ],
+    "motivation": {
+      "title": "DoJomle: Your AI-Powered Summarization Expert",
+      "description": "Our system uses advanced NLP models to extract core insights from YouTube videos, Telegram voice channels, Castbox podcasts and more - delivering knowledge in seconds, not hours",
+      "cta": "Check Out Summaries"
+    }
+  },
+  "subscription": {
+    "title": "GET DoJomle Updates",
+    "description": "Join The Conversation\nSubscribe to Walltist Updates.",
+    "enterEmail": "Enter Your Email ..."
+  }
+}

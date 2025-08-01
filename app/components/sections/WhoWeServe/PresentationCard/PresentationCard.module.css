@@ -1,0 +1,42 @@
+.container,
+.headerContainer {
+    background-color: white;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    gap: 2rem;
+}
+
+.headerContainer {
+    gap: 1rem;
+}
+.container {
+    padding: 24px;
+    justify-content: space-between;
+}
+
+.icon {
+    background-color: #f1f1f8;
+    width: 42px;
+    height: 42px;
+    padding: 16px;
+    border-radius: 42px;
+    color: #7478f8;
+}
+
+.title {
+    font-size: 16pt;
+    white-space: pre-wrap;
+}
+
+
+.description {
+    color: #737377;
+    font-size: 12pt;
+    max-width: 600px;
+    white-space: pre-wrap;
+}

@@ -1,0 +1,43 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 2rem;
+  text-decoration: none;
+  transition: background-color .2s;
+}
+
+.root:hover {
+  cursor: pointer;
+  background-color: rgb(99, 103, 247, 0.5) !important;
+  color: white;
+  border: #7478F8;
+}
+
+.icon {
+  color: #7478F8;
+  border-radius: 4rem;
+}
+
+.iconOutline {
+  border: #7478F8 1px solid;
+}
+
+.iconShadow {
+  box-shadow: 0px 0px 24px 0px rgba(116, 120, 248, 0.15);
+  -webkit-box-shadow: 0px 0px 24px 0px rgba(116, 120, 248, 0.15);
+  -moz-box-shadow: 0px 0px 24px 0px rgba(116, 120, 248, 0.15);
+}
+
+.dataContainer {
+  text-align: start;
+}
+
+.title {
+  font-size: 16px
+}
+
+.label {
+  margin-top: 12px;
+  color: #8f8f92;
+  font-size: 14px
+}

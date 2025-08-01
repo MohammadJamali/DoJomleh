@@ -1,0 +1,35 @@
+.container {
+    background-color: #111117;
+    padding-top: 10vh;
+    padding-bottom: 96px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+}
+
+.description {
+    text-align: center;
+    color: #737377;
+    font-size: 1em;
+    max-width: 600px;
+    white-space: pre-wrap;
+}
+
+.slogan {
+    text-align: center;
+    font-size: 3em;
+    white-space: pre-wrap;
+}
+
+.innerContent {
+    margin-top: 2rem;
+}
+
+.purple {
+    color: #6C63FF;
+    font-weight: bold;
+}
