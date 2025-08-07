@@ -1,15 +1,15 @@
 import { getDictionary } from "../../lib/get-dictionary";
 import { Locale } from "../../lib/i18n-config";
-import SectionCallToAction from "../components/sections/CallToAction/SectionCallToAction";
-import SectionNews from "../components/sections/News/SectionNews";
-import StatsSection from "../components/sections/Statistics/SectionStatistics";
-import SectionWhoWeServe from "../components/sections/WhoWeServe/SectionWhoWeServe";
-import SectionTopNews from "../components/sections/TopNews/SectionTopNews";
-import SectionSubscription from "../components/sections/Subscription/SectionSubscription";
-import SectionFooter from "../components/sections/Footer/SectionFooter";
-import SectionCards from "../components/sections/Cards/SectionCards";
+import SectionCallToAction from "../components/sections/SectionCallToAction/SectionCallToAction";
+import SectionMostViewed from "../components/sections/SectionMostViewed/SectionMostViewed";
+import SectionStatistics from "../components/sections/SectionStatistics/SectionStatistics";
+import SectionChallengeSolutions from "../components/sections/SectionChallengeSolutions/SectionChallengeSolutions";
+import SectionSubscription from "../components/sections/SectionSubscription/SectionSubscription";
+import SectionFooter from "../components/sections/SectionFooter/SectionFooter";
+import SectionRecentContents from "../components/sections/SectionRecentContents/SectionRecentContents";
 import KBar from "../components/core/HeaderNavigation/KBar";
 import { Navbar } from "../components/core/HeaderNavigation/Navbar";
+import SectionDownload from "../components/sections/SectionDownload/SectionDownload";
 
 
 export default async function Home(props: {
@@ -18,24 +18,25 @@ export default async function Home(props: {
   const { lang } = await props.params;
   const localization = await getDictionary(lang);
 
-  return (
-      <KBar>
-        <Navbar localization={localization}/>
-        <main>
-          <SectionCallToAction localization={localization}/>
-          <StatsSection localization={localization}/>
-          <SectionWhoWeServe />
-          <SectionTopNews
-            image="https://picsum.photos/id/191/1200/600"
-            title={"Lorem ipsum is placeholder"}
-            description={"Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."}
-            linkText={"Learn more"}
-            href={"#"} />
-          <SectionNews />
-          <SectionCards />
-          <SectionSubscription localization={localization}/>
-          <SectionFooter localization={localization}/>
-        </main>
-      </KBar>
-  )
+  return <KBar>
+    <Navbar localization={localization} />
+    <main>
+      <SectionCallToAction localization={localization} />
+      <SectionRecentContents localization={localization} />
+      <SectionChallengeSolutions localization={localization} />
+      <SectionMostViewed localization={localization} />
+      <SectionStatistics localization={localization} />
+      <SectionDownload
+        image="images/robots-banner.jpg"
+        title={localization.midlevelBanner.title}
+        description={localization.midlevelBanner.description}
+        downloadAndroid={localization.midlevelBanner.downloadAndroid}
+        downloadiOS={localization.midlevelBanner.downloadiOS}
+        hrefIOS={""}
+        hrefAndroid={""}
+        imageAlt={""} />
+      <SectionSubscription localization={localization} />
+      <SectionFooter localization={localization} />
+    </main>
+  </KBar>
 }

@@ -2,7 +2,7 @@ import styles from './CustomButton.module.css'
 import Link from 'next/link';
 
 import {
-  PlusIcon
+    PlusIcon
 } from "@heroicons/react/24/outline";
 import { SVGProps } from 'react';
 
@@ -21,6 +21,7 @@ export interface CustomButtonProps {
     title?: string;
     label?: string;
     boldTitle?: boolean;
+    spacebetween?: boolean;
     href?: string;
 
     borderStyle?: string;
@@ -50,7 +51,8 @@ export function CustomButton({
     borderWidth,
     borderStyle,
     href,
-    color
+    color,
+    spacebetween,
 }: CustomButtonProps) {
     Icon ??= PlusIcon;
 
@@ -96,6 +98,8 @@ export function CustomButton({
         borderStyle: borderStyle ? borderStyle : undefined,
         borderWidth: borderWidth ? borderWidth : undefined,
         borderColor: borderColor ? `#${borderColor.toString(16)}` : undefined,
+
+        justifyContent: spacebetween ? "space-between" : undefined
     }
 
     let rootObj = href ?

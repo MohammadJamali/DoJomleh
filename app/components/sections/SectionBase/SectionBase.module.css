@@ -23,6 +23,7 @@
     text-align: center;
     font-size: 3em;
     white-space: pre-wrap;
+    max-width: 850px;
 }
 
 .innerContent {

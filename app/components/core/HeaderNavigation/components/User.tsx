@@ -62,7 +62,7 @@ const User = ({ localization }: { localization: Dictionary }) => {
   };
 
   let className = "-left-[170px]";
-  if (localization.lang === "fa") {
+  if (localization.rtl) {
     className = "-right-[170px]"
   }
 
@@ -70,7 +70,7 @@ const User = ({ localization }: { localization: Dictionary }) => {
     <div className="relative group">
       <div className="flex items-center h-10 gap-3 rounded-lg cursor-pointer w-fit hover:bg-slate-200 px-2">
         <img
-          src={`https://api.dicebear.com/5.x/bottts-neutral/svg?seed=${ms}`}
+          src={`https://api.dicebear.com/5.x/bottts-neutral/svg?seed=24`}
           className="my-auto ml-3 rounded-full w-7 h-7"
         />
         <p className="mr-3 font-bold text-slate-500 hover:text-slate-700">Steve</p>

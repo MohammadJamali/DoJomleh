@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    gap: 2rem;
+    width: 100%;
+    padding: 0 1rem;
+    justify-content: left;
+    align-content: left;
+    align-items: center;
+    /* background-color: #f7f7f9; */
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+.image {
+    border-radius: 3rem;
+    width: 100%;
+    max-width: 1200px;
+    padding: 24px;
+    background: #9000ff;
+    background: linear-gradient(90deg, #adadfb26 0%, #adadfb00 100%);
+}
+
+.title {
+    font-size: 2em;
+    white-space: pre-wrap;
+}
+
+.description {
+    color: #737377;
+    font-size: 1.1em;
+    max-width: 600px;
+    white-space: pre-wrap;
+    text-align: center;
+}
+
+.download {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}

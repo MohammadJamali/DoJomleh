@@ -1,0 +1,63 @@
+/* PresentationCard.module.css */
+.container {
+    background-color: white;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 24px;
+    justify-content: space-between;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.headerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.icon {
+    width: 64px;
+    height: 64px;
+    padding: 16px;
+    border-radius: 42px;
+}
+
+.title {
+    font-size: 1.25rem; /* 16pt equivalent */
+    white-space: pre-wrap;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0.5rem 0;
+}
+
+.description {
+    color: #737377;
+    font-size: 1rem; /* 12pt equivalent */
+    max-width: 600px;
+    white-space: pre-wrap;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+    
+    .title {
+        font-size: 1.1rem;
+    }
+    
+    .description {
+        font-size: 0.9rem;
+    }
+}

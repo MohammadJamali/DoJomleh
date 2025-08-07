@@ -36,8 +36,8 @@ export const SubLinksBox = (props: SubLinksBoxProps) => {
           <div className="flex">
             <div className="h-[calc(100%-3em)] my-auto w-[1px] bg-gray-300 " />
             <ul className="w-56 p-2">
-              {extraLinks?.map((extraLink) => (
-                <Link href={extraLink.link} className="flex items-center w-full">
+              {extraLinks?.map((extraLink, index) => (
+                <Link href={extraLink.link} className="flex items-center w-full" key={index}>
                   <li
                     key={extraLink.name}
                     className="p-2 h-10 hover:bg-slate-200  rounded-lg flex items-center justify-start cursor-pointer text-sm font-semibold text-gray-600"

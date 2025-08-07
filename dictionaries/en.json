@@ -16,8 +16,8 @@
       }
     },
     "body": {
-      "slogan": "Even the longest contents can be",
-      "highlightedSlogan": "Summarized In 2Sentences",
+      "title": "Even the longest contents can be",
+      "highlightedTitle": "Summarized In 2Sentences (DoJomle)",
       "description": "Our AI extracts core ideas from Castbox podcasts, Telegram voice channels, and YouTube videos and other sources - saving you hours of listening time",
       "actions": {
         "cta": "Try It Free",
@@ -58,23 +58,87 @@
       ]
     }
   },
+  "blogs": {
+    "title": "Recent Summarized Contents",
+    "description": "Read the latest and most practical content summaries, allowing you to gain maximum insights in minimal time.",
+    "posts": [
+      {
+        "id": 1,
+        "title": "Short-Term Crypto Market Challenges, And Bullish 2024 Outlook",
+        "description": "The cryptocurrency market is facing short-term challenges such as heavy ETF selling and an increase in short positions, which could lead to a correction or stagnation. However, despite expectations of a calm August and the possibility of further corrections, the long-term outlook for 2024 remains highly positive and bullish, with conditions expected to improve starting in September.",
+        "image": "images/thomas.jpg",
+        "date": "2025-05-14",
+        "features": ["Crypto", "ETF", "September"]
+      },
+      {
+        "id": 2,
+        "title": "The Most Important Things to Know Before Buying a Laptop!",
+        "description": "When buying a laptop, prioritize hardware specs like CPU, GPU, RAM, and cooling system based on usage and budget, not brand. Pay attention to key factors such as component balance, GPU power consumption, display type and refresh rate, and available ports—and avoid older-generation models.",
+        "image": "images/vigi.jpg",
+        "date": "2025-05-13",
+        "features": ["Laptop", "CPU - GPU", "Purchase"]
+      },
+      {
+        "id": 3,
+        "title": "Recommendations for Increasing Personal Resilience",
+        "description": "Given the forecast of a more challenging future for the country, enhancing financial and psychological resilience is essential for survival. This includes avoiding debt and unnecessary expenses, creating an emergency fund, cautious investing (such as in gold, paper dollars, and cryptocurrencies stored in hardware wallets rather than exchanges), and avoiding high-risk transactions.",
+        "image": "images/ramzali.jpg",
+        "features": ["Resilience", "Investment", "Future"]
+      }
+    ]
+  },
+  "midlevelBanner": {
+    "title": "Take back your time — Read Smart! 🚀",
+    "description": "No need to spend hours listening to podcasts, watching lengthy videos, or reading long texts! Our AI converts any content into concise Persian summaries in minutes.",
+    "downloadAndroid": "Download Android",
+    "downloadiOS": "Download iOS"
+  },
+  "topPosts": {
+    "title": "Most Viewed Summaries",
+    "description": "",
+    "cta": "Learn more",
+    "posts": [
+      {
+        "id": "1",
+        "title": "Local AI Models: Privacy and Security Advantages",
+        "description": "Running AI models locally (e.g., using LM Studio or Ollama) ensures data isn't sent to external servers, and tools like Docker can create isolated environments. While large models require powerful hardware, smaller versions (1.5B to 7B parameters) can run on standard systems.",
+        "image": "images/NetworkChuck.jpg"
+      },
+      {
+        "id": "2",
+        "title": "Bitcoin Market Analysis: Price Drop and Key Indicators",
+        "description": "Bitcoin dropped 18% to $84K in February, primarily due to the Bybit exchange hack. Technical indicators like RSI and 200-week moving average show slowing momentum, though long-term forecasts (e.g., Stock-to-Flow model) remain bullish.",
+        "image": "images/planb.jpg"
+      },
+      {
+        "id": "3",
+        "title": "Elon Musk's Strategic Lessons from Xenophon's \"Anabasis\" on Iran",
+        "description": "Elon Musk's recent study of Xenophon's Anabasis—a chronicle of a failed Greek campaign in Persia—suggests he may analyze historical patterns of foreign interventions in Iran. The text warns that technological or proxy warfare alone, without understanding Iran's geography and cultural resilience, risks repeating ancient defeats",
+        "image": "images/alikhorsand1355.jpg"
+      }
+    ]
+  },
   "statistics": {
-    "title": "Transforming Content Consumption, Efficiency at Scale",
+    "title": "Transforming Content Consumption\nEfficiency at Scale",
     "description": "DoJomle revolutionizes how you consume digital content by distilling hours of audio/video into powerful 2-sentence insights",
     "stats": [
       {
+        "icon": "SparklesIcon",
         "title": "1M+",
         "label": "Summaries Generated"
       },
       {
+        "icon": "ClockIcon",
         "title": "5 Hours",
         "label": "Time Saved Daily Per User"
       },
       {
+        "icon": "GlobeAltIcon",
         "title": "3",
         "label": "Content Sources"
       },
       {
+        "icon": "FaceSmileIcon",
         "title": "4.9/5",
         "label": "User Satisfaction"
       }
@@ -85,9 +149,66 @@
       "cta": "Check Out Summaries"
     }
   },
+  "challenges": {
+    "title": "Our Smart Solution for These Challenges",
+    "description": "If you face these problems, 2Sentences is perfect for you:",
+    "cta": "Learn more",
+    "categories": [
+      {
+        "icon": "ClockIcon",
+        "title": "Short on time?",
+        "description": "We condense hours of audio/video into 2-second summaries so you only consume key insights",
+        "cta": "Save time now"
+      },
+      {
+        "icon": "SparklesIcon",
+        "title": "Content overload?",
+        "description": "Our algorithms identify the most crucial content portions for focused learning",
+        "cta": "Stay focused"
+      },
+      {
+        "icon": "AcademicCapIcon",
+        "title": "Falling behind?",
+        "description": "With our instant summaries, stay updated anywhere - even between meetings",
+        "cta": "Keep up with trends"
+      },
+      {
+        "icon": "GlobeAltIcon",
+        "title": "Non-English content?",
+        "description": "We summarize content from multiple languages into clear English summaries",
+        "cta": "Understand global content"
+      }
+    ],
+    "footer": "2Sentences: Transforming digital challenges into learning opportunities"
+  },
   "subscription": {
     "title": "GET DoJomle Updates",
     "description": "Join The Conversation\nSubscribe to Walltist Updates.",
-    "enterEmail": "Enter Your Email ..."
+    "enterEmail": "Enter Your Email ...",
+    "submit": "Submit"
+  },
+  "footer": {
+    "contact": {
+      "description": "AI-powered content summarization tool. Developed by SmartNeutron Group.",
+      "stayConnected": "Stay Connected"
+    },
+    "buttons": [
+      {
+        "name": "Download App",
+        "href": "#"
+      },
+      {
+        "name": "Invest In Us",
+        "href": "#"
+      },
+      {
+        "name": "Archive",
+        "href": "#"
+      }
+    ],
+    "siteMap": "Site Map",
+    "termsOfUse": "Terms of Use",
+    "privacyPolicy": "Privacy Policy",
+    "copywrite": "© 2025 SmartNeutrons All rights reserved"
   }
 }

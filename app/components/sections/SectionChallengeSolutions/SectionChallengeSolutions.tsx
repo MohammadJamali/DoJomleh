@@ -1,0 +1,27 @@
+import { getHeroIcon } from "../../core/HeroIcon/HeroIcon";
+import SectionBase from "../SectionBase/SectionBase";
+import PresentationCard from "./PresentationCard/PresentationCard";
+import styles from "./SectionChallengeSolutions.module.css";
+import { Dictionary } from "@/lib/dictionary-types";
+
+export default function SectionChallengeSolutions({ localization }: { localization: Dictionary }) {
+    return <SectionBase
+        sectionId="challenge-solutions"
+        title={localization.challenges.title}
+        description={localization.challenges.description}
+        isStriped>
+        <div className={styles.grid} role="list">{
+            localization.challenges.categories.map((val) => (
+                <PresentationCard
+                    key={val.title}
+                    Icon={getHeroIcon(val.icon)}
+                    title={val.title}
+                    description={val.description}
+                    linkText={localization.challenges.cta}
+                    href={val.href || undefined}
+                    iconColor={val.iconColor}
+                    iconBgColor={val.iconBgColor}/>
+            ))
+        }</div>
+    </SectionBase>;
+}

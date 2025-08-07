@@ -1,0 +1,31 @@
+.grid {
+  display: grid;
+  justify-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+}
+
+@media (width <= 1000px) {
+  .grid {
+    grid-template-columns: minmax(200px, auto) minmax(200px, auto);
+  }
+}
+
+@media (width <= 550px) {
+  .grid {
+    grid-template-columns: minmax(200px, auto);
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  gap: 128px;
+}

@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: Vazirmatn;
   src: url('/fonts/webfonts/Vazirmatn-Thin.woff2') format('woff2');
