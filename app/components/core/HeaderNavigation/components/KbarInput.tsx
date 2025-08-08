@@ -24,7 +24,7 @@ export const KbarInput = ({ localization }: {localization: Dictionary}) => {
         text-white p-1 lg:mx-2 rounded-full" 
         />
         <span className="hidden lg:inline ">
-          {localization.callToAction.header.search} (⌘K)
+          {localization.header.search} (⌘K)
         </span>
       </div>
     </button>

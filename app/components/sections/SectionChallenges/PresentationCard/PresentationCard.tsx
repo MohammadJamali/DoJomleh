@@ -9,9 +9,9 @@ interface PresentationCardProps {
     title: string;
     description: string;
     linkText: string;
-    href: string;
-    iconColor?: string;
-    iconBgColor?: string;
+    href?: string;
+    iconColor?: string | null;
+    iconBgColor?: string | null;
 }
 
 export default function PresentationCard({
@@ -29,8 +29,8 @@ export default function PresentationCard({
                 <Icon
                     className={styles.icon}
                     style={{
-                        color: iconColor,
-                        backgroundColor: iconBgColor,
+                        color: iconColor ?? undefined,
+                        backgroundColor: iconBgColor ?? undefined,
                     }}
                     aria-hidden="true"
                 />

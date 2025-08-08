@@ -19,8 +19,8 @@ export default function SectionChallenges({ localization }: { localization: Dict
                     description={val.description}
                     linkText={localization.challenges.cta}
                     href={val.href || undefined}
-                    iconColor={val.iconColor}
-                    iconBgColor={val.iconBgColor}/>
+                    iconColor={val.iconColor || undefined}
+                    iconBgColor={val.iconBgColor || undefined}/>
             ))
         }</div>
     </SectionBase>;

@@ -194,25 +194,37 @@
         "icon": "ClockIcon",
         "title": "وقت کم دارید؟",
         "description": "ما ساعت‌ها محتوای صوتی/تصویری را در ۲ ثانیه خلاصه می‌کنیم تا شما فقط نکات کلیدی را بخوانید",
-        "cta": "همین حالا وقت ذخیره کنید"
+        "cta": "همین حالا وقت ذخیره کنید",
+        "href": null,
+        "iconColor": null,
+        "iconBgColor": null
       },
       {
         "icon": "SparklesIcon",
         "title": "محتوای زیاد، حواس‌پرتی بیشتر؟",
         "description": "الگوریتم‌های ما مهم‌ترین بخش‌های محتوا را شناسایی می‌کند تا بدون سردرگمی یاد بگیرید",
-        "cta": "متمرکز بمانید"
+        "cta": "متمرکز بمانید",
+        "href": null,
+        "iconColor": null,
+        "iconBgColor": null
       },
       {
         "icon": "AcademicCapIcon",
         "title": "از قافله عقب می‌مانید؟",
         "description": "با خلاصه‌های فوری ما، همیشه به‌روز بمانید - حتی در مترو یا بین دو جلسه کاری",
-        "cta": "همگام با ترندها"
+        "cta": "همگام با ترندها",
+        "href": null,
+        "iconColor": null,
+        "iconBgColor": null
       },
       {
         "icon": "GlobeAltIcon",
         "title": "زبان انگلیسی چالش شماست؟",
         "description": "خلاصه‌های فارسی از محتوای انگلیسی برای درک سریع‌تر بدون نیاز به تسلط زبانی کامل",
-        "cta": "محتوای جهانی را بفهمید"
+        "cta": "محتوای جهانی را بفهمید",
+        "href": null,
+        "iconColor": null,
+        "iconBgColor": null
       }
     ]
   },

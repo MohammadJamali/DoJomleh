@@ -194,25 +194,37 @@
         "icon": "ClockIcon",
         "title": "Short on time?",
         "description": "We condense hours of audio/video into 2-second summaries so you only consume key insights",
-        "cta": "Save time now"
+        "cta": "Save time now",
+        "href": null,
+        "iconColor": null,
+        "iconBgColor": null
       },
       {
         "icon": "SparklesIcon",
         "title": "Content overload?",
         "description": "Our algorithms identify the most crucial content portions for focused learning",
-        "cta": "Stay focused"
+        "cta": "Stay focused",
+        "href": null,
+        "iconColor": null,
+        "iconBgColor": null
       },
       {
         "icon": "AcademicCapIcon",
         "title": "Falling behind?",
         "description": "With our instant summaries, stay updated anywhere - even between meetings",
-        "cta": "Keep up with trends"
+        "cta": "Keep up with trends",
+        "href": null,
+        "iconColor": null,
+        "iconBgColor": null
       },
       {
         "icon": "GlobeAltIcon",
         "title": "Non-English content?",
         "description": "We summarize content from multiple languages into clear English summaries",
-        "cta": "Understand global content"
+        "cta": "Understand global content",
+        "href": null,
+        "iconColor": null,
+        "iconBgColor": null
       }
     ],
     "footer": "2Sentences: Transforming digital challenges into learning opportunities"
