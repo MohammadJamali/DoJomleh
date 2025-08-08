@@ -10,11 +10,12 @@ import { Dictionary } from '@/lib/dictionary-types'
 import {
   ArrowUpRightIcon,
 } from "@heroicons/react/24/outline";
-import { getHeroIcon } from '../../core/HeroIcon/HeroIcon';
+import { getHeroIcon } from '../../core/Icons/IconAsString';
 
 export default function SectionStatistics({ localization }: { localization: Dictionary }) {
   return (
     <SectionBase
+      sectionId='statistics'
       title={localization.statistics.title}
       description={localization.statistics.description}
       isStriped
@@ -39,6 +40,7 @@ export default function SectionStatistics({ localization }: { localization: Dict
         }</div>
 
         <SideBySideSplit
+          containerId={"summary-request"}
           rightToLeft={localization.rtl}
           image="images/app.jpg"
           title={localization.statistics.motivation.title}

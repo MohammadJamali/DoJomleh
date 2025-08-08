@@ -1,12 +1,12 @@
-import { getHeroIcon } from "../../core/HeroIcon/HeroIcon";
+import { getHeroIcon } from "../../core/Icons/IconAsString";
 import SectionBase from "../SectionBase/SectionBase";
 import PresentationCard from "./PresentationCard/PresentationCard";
-import styles from "./SectionChallengeSolutions.module.css";
+import styles from "./SectionChallenges.module.css";
 import { Dictionary } from "@/lib/dictionary-types";
 
-export default function SectionChallengeSolutions({ localization }: { localization: Dictionary }) {
+export default function SectionChallenges({ localization }: { localization: Dictionary }) {
     return <SectionBase
-        sectionId="challenge-solutions"
+        sectionId="challenges"
         title={localization.challenges.title}
         description={localization.challenges.description}
         isStriped>

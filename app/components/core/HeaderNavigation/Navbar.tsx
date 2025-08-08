@@ -1,20 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { navigationLinks } from "./Links";
+import getNavigationLinks from "./Links";
 import { HamburgerButton } from "./components/HamburgerButton";
 import { CompanyLogo } from "./components/CompanyLogo";
 import { MenuLinks } from "./components/Menu/MenuLinks";
 import { MobileMenu } from "./components/MobileMenu/MobileMenu";
 import { KbarInput } from "./components/KbarInput";
-import { Dictionary } from "@/lib/dictionary-types";
+import { Dictionary } from '@/lib/dictionary-types';
 import User from "./components/User";
 
-export interface NavbarProps {
-  localization: Dictionary
-}
 
-export const Navbar = ({localization}: NavbarProps) => {
+export const Navbar = ({ localization }: { localization: Dictionary }) => {
   // const location = useLocation();
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -39,12 +36,12 @@ export const Navbar = ({localization}: NavbarProps) => {
           </div>
           <div className="flex items-center justify-center">
             <div className="relative hidden ml-4 text-gray-600 top-[1px] md:block">
-              <MenuLinks menuLinks={navigationLinks} />
+              <MenuLinks menuLinks={getNavigationLinks({localization})} />
             </div>
 
-            <div className="hidden md:block">
+            {/* <div className="hidden md:block">
               <KbarInput localization={localization} />
-            </div>
+            </div> */}
           </div>
           <div className="absolute block transform -translate-x-1/2 md:hidden left-1/2">
             <CompanyLogo localization={localization} />
@@ -54,7 +51,7 @@ export const Navbar = ({localization}: NavbarProps) => {
           </div>
         </div>
         <div className="md:hidden">
-          {isMobileMenuOpen && <MobileMenu menuLinks={navigationLinks} />}
+          {isMobileMenuOpen && <MobileMenu menuLinks={getNavigationLinks({localization})} />}
         </div>
       </nav>
     </>

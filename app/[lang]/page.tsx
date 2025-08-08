@@ -3,7 +3,7 @@ import { Locale } from "../../lib/i18n-config";
 import SectionCallToAction from "../components/sections/SectionCallToAction/SectionCallToAction";
 import SectionMostViewed from "../components/sections/SectionMostViewed/SectionMostViewed";
 import SectionStatistics from "../components/sections/SectionStatistics/SectionStatistics";
-import SectionChallengeSolutions from "../components/sections/SectionChallengeSolutions/SectionChallengeSolutions";
+import SectionChallenges from "../components/sections/SectionChallenges/SectionChallenges";
 import SectionSubscription from "../components/sections/SectionSubscription/SectionSubscription";
 import SectionFooter from "../components/sections/SectionFooter/SectionFooter";
 import SectionRecentContents from "../components/sections/SectionRecentContents/SectionRecentContents";
@@ -23,7 +23,7 @@ export default async function Home(props: {
     <main>
       <SectionCallToAction localization={localization} />
       <SectionRecentContents localization={localization} />
-      <SectionChallengeSolutions localization={localization} />
+      <SectionChallenges localization={localization} />
       <SectionMostViewed localization={localization} />
       <SectionStatistics localization={localization} />
       <SectionDownload

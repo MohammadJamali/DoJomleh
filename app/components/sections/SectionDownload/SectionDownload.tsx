@@ -1,7 +1,7 @@
-import { ArrowUpRightIcon } from "@heroicons/react/16/solid";
 import { CustomButton } from "../../core/CustomButton/CustomButton";
 import styles from "./SectionDownload.module.css";
 import Head from "next/head";
+import { FaApple, FaAndroid } from "react-icons/fa";
 
 interface SectionDownloadProps {
     title: string;
@@ -11,8 +11,7 @@ interface SectionDownloadProps {
     hrefIOS: string; // Separate href for iOS
     hrefAndroid: string; // Separate href for Android
     image: string;
-    imageAlt: string; // Added for SEO
-    sectionId?: string; // For smooth scrolling
+    imageAlt: string;
 }
 
 export default function SectionDownload({
@@ -24,13 +23,12 @@ export default function SectionDownload({
     hrefAndroid,
     image,
     imageAlt,
-    sectionId = "download-section",
 }: SectionDownloadProps) {
     return (
         <section 
-            id={sectionId}
+            id={"download"}
             className={styles.container}
-            aria-labelledby={`${sectionId}-heading`}
+            aria-labelledby={`download-heading`}
         >
             {/* SEO Metadata for this section */}
             <Head>
@@ -50,7 +48,7 @@ export default function SectionDownload({
             />
 
             {/* Semantic heading with ID for accessibility */}
-            <h3 id={`${sectionId}-heading`} className={styles.title}>
+            <h3 id={`download-heading`} className={styles.title}>
                 {title}
             </h3>
 
@@ -66,7 +64,7 @@ export default function SectionDownload({
                     color={0xfff}
                     backgroundColor={0x7478F8}
                     iconBackgroundColor={0xfff}
-                    Icon={ArrowUpRightIcon}
+                    Icon={FaApple}
                     aria-label={`Download ${title} for iOS`}
                 />
 
@@ -77,7 +75,7 @@ export default function SectionDownload({
                     color={0xfff}
                     backgroundColor={0x7478F8}
                     iconBackgroundColor={0xfff}
-                    Icon={ArrowUpRightIcon}
+                    Icon={FaAndroid}
                     aria-label={`Download ${title} for Android`}
                 />
             </div>

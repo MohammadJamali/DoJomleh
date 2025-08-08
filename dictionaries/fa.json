@@ -4,34 +4,53 @@
   "app": {
     "name": "دوجمله"
   },
-  "callToAction": {
-    "header": {
-      "search": "جستجو",
-      "user": {
-        "profile": "نمایه کاربری",
-        "settings": "تنظیمات",
-        "darkTheme": "حالت تاریک",
-        "lightTheme": "حالت روشن",
-        "logout": "خروج"
-      },
-      "navbar": {
-        "summeries": {
-          "label": "خلاصه‌ها",
-          "menus": {
-            "top": "پر بیننده ترین خلاصه‌ها",
-            "recent": "جدید ترین خلاصه‌ها"
-          }
-        },
-        "features":  {
-          "label": "ویژگی‌ها",
-          "menus": {
-            "challenges": "حل چالش‌ها",
-            "summeryRequest": "درخواست خلاصه سازی"
-          }
-        },
-        "download": "دانلود"
-      }
+  "header": {
+    "search": "جستجو",
+    "user": {
+      "profile": "نمایه کاربری",
+      "settings": "تنظیمات",
+      "darkTheme": "حالت تاریک",
+      "lightTheme": "حالت روشن",
+      "logout": "خروج"
     },
+    "navbar": {
+      "summeries": {
+        "label": "خلاصه‌ها",
+        "menus": {
+          "top": {
+            "label": "پر بیننده ترین خلاصه‌ها",
+            "description": ""
+          },
+          "recent": {
+            "label": "جدید ترین خلاصه‌ها",
+            "description": ""
+          }
+        }
+      },
+      "features": {
+        "label": "ویژگی‌ها",
+        "menus": {
+          "challenges": {
+            "label": "چالش‌ها",
+            "description": ""
+          },
+          "statistics": {
+            "label": "خلاصه آمار",
+            "description": ""
+          },
+          "summeryRequest": {
+            "label": "درخواست خلاصه سازی",
+            "description": ""
+          }
+        }
+      },
+      "download": {
+        "label": "دانلود",
+        "description": ""
+      }
+    }
+  },
+  "callToAction": {
     "body": {
       "title": "طولانی‌ترین محتواها را می‌توان در",
       "highlightedTitle": "دوجمله خلاصه کرد",
@@ -167,7 +186,7 @@
     }
   },
   "challenges": {
-    "title": "راه‌حل هوشمند ما برای این چالش‌ها",
+    "title": "چالش‌ها",
     "description": "اگر شما هم با این چالش‌ها روبرو هستید، دوجمله دقیقاً برای شماست:",
     "cta": "توضیح بیشتر",
     "categories": [

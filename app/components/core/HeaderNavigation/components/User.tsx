@@ -21,27 +21,27 @@ const User = ({ localization }: { localization: Dictionary }) => {
 
   const items = [
     {
-      title: localization.callToAction.header.user.profile,
+      title: localization.header.user.profile,
       icon: <IdentificationIcon />,
       color: "bg-indigo-600 ",
       onclick: () => { },
     },
     {
       title: theme === "light"
-        ? localization.callToAction.header.user.darkTheme
-        : localization.callToAction.header.user.lightTheme,
+        ? localization.header.user.darkTheme
+        : localization.header.user.lightTheme,
       icon: theme === "light" ? <MoonIcon /> : <SunIcon />,
       color: "bg-teal-600",
       onclick: () => onChangeThemeClick(),
     },
     {
-      title: localization.callToAction.header.user.settings,
+      title: localization.header.user.settings,
       icon: <AdjustmentsVerticalIcon />,
       color: "bg-fuchsia-600",
       onclick: () => { },
     },
     {
-      title: localization.callToAction.header.user.logout,
+      title: localization.header.user.logout,
       icon: <ExclamationCircleIcon />,
       color: "bg-red-600",
       onclick: () => { },

@@ -22,9 +22,6 @@ export default function SectionMostViewed({ localization }: { localization: Dict
                         title: localization.topPosts.cta,
                         iconOutline: true,
                         iconStart: false,
-                        iconHeight: 12,
-                        iconWidth: 12,
-                        iconPadding: 8,
                     }} />))
         }</CardGrid>
     </SectionBase>

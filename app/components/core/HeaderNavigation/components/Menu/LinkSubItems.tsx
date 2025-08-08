@@ -13,10 +13,8 @@ export const SubLinksBox = (props: SubLinksBoxProps) => {
               className="h-16 hover:bg-slate-200 rounded-xl flex items-center justify-start cursor-pointer font-bold"
             >
               <Link href={subLink.link} className="flex items-center">
-                <div
-                  className={`h-10 w-10 ml-5 flex items-center justify-center rounded-lg ${subLink.color}`}
-                >
-                  <div className="h-3/5 w-3/5 text-white">
+                <div className={`h-10 w-10 mx-2.5 flex items-center justify-center rounded-lg ${subLink.color}`}>
+                  <div className="text-white ">
                     {subLink.icon}
                   </div>
                 </div>

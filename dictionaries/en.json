@@ -4,17 +4,53 @@
   "app": {
     "name": "2Sentences (DoJomle)"
   },
-  "callToAction": {
-    "header": {
-      "search": "Search",
-      "user": {
-        "profile": "Profile",
-        "settings": "Settings",
-        "darkTheme": "Dark theme",
-        "lightTheme": "Light theme",
-        "logout": "Logout"
-      }
+  "header": {
+    "search": "Search",
+    "user": {
+      "profile": "Profile",
+      "settings": "Settings",
+      "darkTheme": "Dark theme",
+      "lightTheme": "Light theme",
+      "logout": "Logout"
     },
+    "navbar": {
+      "summeries": {
+        "label": "Summeries",
+        "menus": {
+          "top": {
+            "label": "Most Viewed Summaries",
+            "description": ""
+          },
+          "recent": {
+            "label": "Recent Summarized Contents",
+            "description": ""
+          }
+        }
+      },
+      "features": {
+        "label": "Features",
+        "menus": {
+          "challenges": {
+            "label": "Challenges",
+            "description": ""
+          },
+          "statistics": {
+            "label": "Statistics Summary",
+            "description": ""
+          },
+          "summeryRequest": {
+            "label": "Request summarization",
+            "description": ""
+          }
+        }
+      },
+      "download": {
+        "label": "Download",
+        "description": ""
+      }
+    }
+  },
+  "callToAction": {
     "body": {
       "title": "Even the longest contents can be",
       "highlightedTitle": "Summarized In 2Sentences (DoJomle)",
@@ -119,8 +155,8 @@
     ]
   },
   "statistics": {
-    "title": "Transforming Content Consumption\nEfficiency at Scale",
-    "description": "DoJomle revolutionizes how you consume digital content by distilling hours of audio/video into powerful 2-sentence insights",
+    "title": "Long content? No thanks!",
+    "description": "DoJomleh revolutionizes your digital content consumption by converting hours of audio and video content into concise two-sentence summaries.",
     "stats": [
       {
         "icon": "SparklesIcon",
@@ -144,13 +180,13 @@
       }
     ],
     "motivation": {
-      "title": "DoJomle: Your AI-Powered Summarization Expert",
-      "description": "Our system uses advanced NLP models to extract core insights from YouTube videos, Telegram voice channels, Castbox podcasts and more - delivering knowledge in seconds, not hours",
-      "cta": "Check Out Summaries"
+      "title": "Your request is a priority! 🎧",
+      "description": "Add your favorite YouTube channel, podcast or Telegram channel to the summarization sources list to see their content summaries on the DoJomleh website and app",
+      "cta": "Request Summarization"
     }
   },
   "challenges": {
-    "title": "Our Smart Solution for These Challenges",
+    "title": "Challenges",
     "description": "If you face these problems, 2Sentences is perfect for you:",
     "cta": "Learn more",
     "categories": [

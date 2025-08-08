@@ -7,7 +7,7 @@ import { randomInt } from 'crypto';
 
 export default function SectionRecentContents({ localization }: { localization: Dictionary }) {
     return <SectionBase
-        sectionId='recent-contents'
+        sectionId='recent-summeries'
         title={localization.blogs.title}
         description={localization.blogs.description}>
         <CardGrid>{
