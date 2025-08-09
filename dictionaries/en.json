@@ -11,7 +11,7 @@
       "settings": "Settings",
       "darkTheme": "Dark theme",
       "lightTheme": "Light theme",
-      "connect": "Connect Web3 Wallet",
+      "connect": "Connect Wallet",
       "connecting": "Connecting ...",
       "disconnect": "Disconnect Wallet",
       "logout": "Logout"
@@ -70,7 +70,7 @@
           "author": "Mohammad Jamali",
           "title": "From hours to minutes with better retention",
           "quote": "2Sentences saved me a lot of time! What used to take hours now takes minutes.",
-          "association": "CEO",
+          "association": "Software Engineer",
           "avatar": "images/13897337.jpg"
         },
         {

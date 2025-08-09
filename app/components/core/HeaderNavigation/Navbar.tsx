@@ -47,7 +47,7 @@ export const Navbar = ({ localization }: { localization: Dictionary }) => {
           <div className="absolute block transform -translate-x-1/2 md:hidden left-1/2">
             <CompanyLogo localization={localization} />
           </div>
-          <div className="flex items-center justify-center gap-4 hidden md:block">
+          <div className="flex items-center justify-center gap-4">
             <User localization={localization} />
           </div>
         </div>

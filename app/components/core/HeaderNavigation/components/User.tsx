@@ -105,20 +105,20 @@ function WalletMenu({ localization }: { localization: Dictionary }) {
     },
   ];
 
-  let className = "-left-[150px]";
+  let className = "-left-[245px] md:-left-[45px]";
   if (localization.rtl) {
-    className = "-right-[150px]";
+    className = "-right-[250px] md:-right-[60px]";
   }
 
   return (
     <div className="relative group">
-      <div className="flex items-center h-10 gap-3 rounded-lg cursor-pointer w-fit hover:bg-slate-200 px-2">
+      <div className={`flex items-center h-10 gap-3 rounded-lg cursor-pointer w-fit hover:bg-slate-200 px-2`}>
         <img
           src={`https://api.dicebear.com/5.x/bottts-neutral/svg?seed=24`}
-          className="my-auto ml-3 rounded-full w-7 h-7"
+          className="my-auto rounded-full w-7 h-7"
           alt="avatar"
         />
-        <p className="mr-3 font-bold text-slate-500 hover:text-slate-700">
+        <p className={`${ localization.rtl ? "": "mr-3"} font-bold text-slate-500 hover:text-slate-700 hidden md:block`}>
           {connecting
             ? localization.header.user.connecting || "Connecting..."
             : connected
@@ -127,9 +127,9 @@ function WalletMenu({ localization }: { localization: Dictionary }) {
         </p>
       </div>
       <div
-        className={`absolute w-72 hidden md:group-hover:flex flex-col pt-2 ${className}`}
+        className={`absolute w-72 hidden group-hover:flex flex-col pt-2 ${className}`}
       >
-        <ul className="p-2 bg-white shadow-[rgba(0,_0,_0,_0.24)_0px_0px_40px] shadow-slate-400 hidden md:group-hover:flex flex-col rounded-xl">
+        <ul className="p-2 bg-white shadow-[rgba(0,_0,_0,_0.24)_0px_0px_40px] shadow-slate-400 rounded-xl">
           {items.map((item) => (
             <li
               key={item.title}

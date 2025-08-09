@@ -1,5 +1,5 @@
 import styles from './SectionCallToAction.module.css'
-import SectionBase from "../SectionBase/SectionBase";
+import SectionBase from "../SectionBase";
 import { CustomButton } from '../../core/CustomButton/CustomButton';
 import SectionReviewCarousel from '../../modules/ReviewCard/SectionReviewCarousel';
 import { Dictionary } from '@/lib/dictionary-types';

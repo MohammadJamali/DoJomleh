@@ -1,15 +1,15 @@
 import { getDictionary } from "../../lib/get-dictionary";
 import { Locale } from "../../lib/i18n-config";
 import SectionCallToAction from "../components/sections/SectionCallToAction/SectionCallToAction";
-import SectionMostViewed from "../components/sections/SectionMostViewed/SectionMostViewed";
+import SectionMostViewed from "../components/sections/SectionMostViewed";
 import SectionStatistics from "../components/sections/SectionStatistics/SectionStatistics";
 import SectionChallenges from "../components/sections/SectionChallenges/SectionChallenges";
-import SectionSubscription from "../components/sections/SectionSubscription/SectionSubscription";
-import SectionFooter from "../components/sections/SectionFooter/SectionFooter";
+import SectionSubscription from "../components/sections/SectionSubscription";
+import SectionFooter from "../components/sections/SectionFooter";
 import SectionRecentContents from "../components/sections/SectionRecentContents/SectionRecentContents";
 import KBar from "../components/core/HeaderNavigation/KBar";
 import { Navbar } from "../components/core/HeaderNavigation/Navbar";
-import SectionDownload from "../components/sections/SectionDownload/SectionDownload";
+import SectionDownload from "../components/sections/SectionDownload";
 
 
 export default async function Home(props: {

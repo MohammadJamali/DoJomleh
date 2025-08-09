@@ -1,5 +1,5 @@
 import { getHeroIcon } from "../../core/Icons/IconAsString";
-import SectionBase from "../SectionBase/SectionBase";
+import SectionBase from "../SectionBase";
 import PresentationCard from "./PresentationCard/PresentationCard";
 import styles from "./SectionChallenges.module.css";
 import { Dictionary } from "@/lib/dictionary-types";

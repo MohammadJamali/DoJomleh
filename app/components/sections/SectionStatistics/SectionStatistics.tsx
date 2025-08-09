@@ -1,7 +1,7 @@
 'use client';
 
 import styles from './SectionStatistics.module.css'
-import SectionBase from '../SectionBase/SectionBase'
+import SectionBase from '../SectionBase'
 import SideBySideSplit from '../../core/SideBySideSplit/SideBySideSplit'
 import { CustomButtonProps } from '../../core/CustomButton/CustomButton'
 import Card from '../../core/Cards/Card'
