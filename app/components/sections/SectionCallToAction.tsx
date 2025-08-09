@@ -1,10 +1,9 @@
-import styles from './SectionCallToAction.module.css'
-import SectionBase from "../SectionBase";
-import { CustomButton } from '../../core/CustomButton/CustomButton';
-import SectionReviewCarousel from '../../modules/ReviewCard/SectionReviewCarousel';
 import { Dictionary } from '@/lib/dictionary-types';
 import { ArrowUpRightIcon } from '@heroicons/react/16/solid';
 import { PlayIcon } from '@heroicons/react/24/outline';
+import SectionBase from './SectionBase';
+import { CustomButton } from '../core/CustomButton/CustomButton';
+import SectionReviewCarousel from '../modules/SectionReviewCarousel';
 
 export default async function SectionCallToAction({ localization }: { localization: Dictionary }) {
     return <SectionBase
@@ -14,8 +13,8 @@ export default async function SectionCallToAction({ localization }: { localizati
         description={localization.callToAction.body.description}
         isStriped>
 
-        <div className={styles.container}>
-            <div className={styles.ctaButtons}>
+        <div className="flex flex-col justify-space-between">
+            <div className="flex justify-center gap-8 mb-16">
                 <CustomButton
                     href="/invest"
                     title={localization.callToAction.body.actions.cta}

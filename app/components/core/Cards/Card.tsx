@@ -1,428 +1,230 @@
-// import styles from "./Card.module.css";
-// import Image from "next/image";
-// import Link from "next/link";
-// import { CSSProperties, SVGProps } from "react";
-// import { CustomButton, CustomButtonProps } from "../CustomButton/CustomButton";
-
-// export interface Feature {
-//     Icon: React.ComponentType<SVGProps<SVGSVGElement>>;
-//     title: string;
-// }
-
-// export interface CardProps {
-//     Icon?: React.ComponentType<SVGProps<SVGSVGElement>>;
-//     iconBackgroundColor?: number;
-//     iconColor?: number;
-//     iconWidth?: number;
-//     iconHeight?: number;
-//     iconPadding?: number;
-//     showFooterTexture?: boolean;
-//     backgroundColor?: number;
-//     bannerImage?: string;
-//     href?: string;
-//     profilePicture?: string;
-//     title: string;
-//     description: string;
-//     features?: Feature[];
-//     footerButton?: CustomButtonProps;
-//     date?: Date;
-//     width?: number,
-//     height?: number,
-//     minWidth?: number,
-//     minHeight?: number,
-//     maxWidth?: number,
-//     maxHeight?: number,
-//     headerHeight?: number,
-//     headerPadding?: number,
-//     headerContentPadding?: number,
-// }
-
-// export default function Card({
-//     Icon,
-//     iconColor,
-//     iconBackgroundColor,
-//     iconWidth = 32,
-//     iconHeight = 32,
-//     iconPadding = 4,
-//     showFooterTexture = false,
-//     backgroundColor = 0xffffff,
-//     bannerImage,
-//     href,
-//     profilePicture,
-//     title,
-//     description,
-//     features = [],
-//     footerButton,
-//     date,
-//     width,
-//     height,
-//     minWidth,
-//     minHeight,
-//     maxWidth,
-//     maxHeight,
-//     headerHeight,
-//     headerPadding = 16,
-//     headerContentPadding,
-// }: CardProps) {
-//     headerHeight ??= bannerImage ? 200 : undefined;
-//     if (headerContentPadding === undefined) {
-//         if (headerPadding) {
-//             headerContentPadding ??= bannerImage ? 16 : 8;
-//         } else {
-//             headerContentPadding ??= 24;
-//         }
-//     }
-
-//     const cardContent = (
-//         <>
-//             {showFooterTexture && (
-//                 <>
-//                     <div className={styles.halfCircle} aria-hidden="true" />
-//                     <div className={styles.halfCircleTop} aria-hidden="true" />
-//                 </>
-//             )}
-
-//             <div className={styles.card}>
-//                 <div style={{
-//                     padding: headerPadding,
-//                     paddingBottom: 0,
-//                 }}>
-//                     <div style={{
-//                         backgroundImage: `url(${bannerImage})`,
-//                         backgroundRepeat: "no-repeat",
-//                         backgroundSize: "cover",
-//                         borderTopRightRadius: 16,
-//                         borderTopLeftRadius: 16,
-//                         borderBottomLeftRadius: headerPadding ? 16 : 0,
-//                         borderBottomRightRadius: headerPadding ? 16 : 0,
-//                         height: headerHeight,
-//                         padding: headerContentPadding,
-//                         paddingBottom: 0,
-//                     }}>
-//                         <div className={styles.headerContainer}>
-//                             {profilePicture ? (
-//                                 <Image
-//                                     style={{
-//                                         backgroundColor: iconBackgroundColor !== undefined
-//                                         ? iconBackgroundColor.toString(16)
-//                                         : undefined
-//                                     }}
-//                                     src={profilePicture}
-//                                     alt="Profile"
-//                                     width={40}
-//                                     height={40}
-//                                     className={styles.avatar}
-//                                 />
-//                             ) : Icon ? (
-//                                 <Icon
-//                                     style={{ 
-//                                         backgroundColor: iconBackgroundColor !== undefined 
-//                                         ? iconBackgroundColor.toString(16)
-//                                         : undefined ,
-//                                         color: iconColor 
-//                                         ? iconColor.toString(16)
-//                                         : undefined,
-//                                         width: iconWidth,
-//                                         height: iconHeight,
-//                                         padding: iconPadding,
-//                                     }}
-//                                     className={styles.icon} />
-//                             ) : null}
-
-//                             {date && (
-//                                 <div className={styles.time}>
-//                                     <p className={styles.age}>
-//                                         {date.toLocaleDateString('en-US', {
-//                                             month: 'short',
-//                                             day: '2-digit',
-//                                         })}
-//                                     </p>
-//                                     <p className={styles.year}>{date.getFullYear()}</p>
-//                                 </div>
-//                             )}
-//                         </div>
-//                     </div>
-//                 </div>
-//                 <div className={styles.body}>
-//                     <h2 className={styles.cardTitle}>{title}</h2>
-//                     <p className={styles.cardLabel}>{description}</p>
-
-//                     {features.length > 0 && (
-//                         <ul className={styles.features}>
-//                             {features.map((feature, i) => (
-//                                 <li key={i} className={styles.featureItem}>
-//                                     <feature.Icon className={styles.featureIcon} />
-//                                     <span>{feature.title}</span>
-//                                 </li>
-//                             ))}
-//                         </ul>
-//                     )}
-
-//                     {footerButton && (
-//                         <div className={styles.footer}>
-//                             <CustomButton
-//                                 Icon={footerButton.Icon}
-//                                 title={footerButton.title}
-//                                 label={footerButton.label}
-//                                 iconStart
-//                             />
-//                         </div>
-//                     )}
-//                 </div>
-//             </div>
-//         </>
-//     );
-
-//     let cardContainerStyle: CSSProperties = {
-//         backgroundColor: `#${backgroundColor.toString(16)}`,
-//         width: width,
-//         height: height,
-//         minWidth: minWidth,
-//         minHeight: minHeight,
-//         maxWidth: maxWidth,
-//         maxHeight: maxHeight
-//     }
-
-//     return href ? (
-//         <Link
-//             href={href}
-//             aria-label={title}
-//             className={`${styles.cardContainer} ${styles.activeCard}`}
-//             style={cardContainerStyle}
-//         >
-//             {cardContent}
-//         </Link>
-//     ) : (
-//         <div
-//             aria-label={title}
-//             className={styles.cardContainer}
-//             style={cardContainerStyle}
-//         >
-//             {cardContent}
-//         </div>
-//     );
-// }
-
-import styles from "./Card.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { CSSProperties, SVGProps } from "react";
 import { CustomButton, CustomButtonProps } from "../CustomButton/CustomButton";
 
 export interface Feature {
-    Icon: React.ComponentType<SVGProps<SVGSVGElement>>;
-    title: string;
-    description?: string; // Added for better feature context
+  Icon: React.ComponentType<SVGProps<SVGSVGElement>>;
+  title: string;
+  description?: string;
 }
 
 export interface CardProps {
-    Icon?: React.ComponentType<SVGProps<SVGSVGElement>>;
-    iconBackgroundColor?: string; // Changed from number to string for direct hex/rgb values
-    iconColor?: string;
-    iconWidth?: number;
-    iconHeight?: number;
-    iconPadding?: number;
-    showFooterTexture?: boolean;
-    backgroundColor?: string;
-    bannerImage?: string;
-    href?: string;
-    profilePicture?: string;
-    title: string;
-    description: string;
-    features?: Feature[];
-    footerButton?: CustomButtonProps;
-    date?: Date;
-    width?: number | string;
-    height?: number | string;
-    minWidth?: number | string;
-    minHeight?: number | string;
-    maxWidth?: number | string;
-    maxHeight?: number | string;
-    headerHeight?: number;
-    headerPadding?: number;
-    headerContentPadding?: number;
-    loading?: "eager" | "lazy"; // Added for image loading optimization
-    priority?: boolean; // Added for critical image loading
+  Icon?: React.ComponentType<SVGProps<SVGSVGElement>>;
+  iconBackgroundColor?: string;
+  iconColor?: string;
+  iconWidth?: number;
+  iconHeight?: number;
+  iconPadding?: number;
+  showFooterTexture?: boolean;
+  backgroundColor?: string;
+  bannerImage?: string;
+  href?: string;
+  profilePicture?: string;
+  title: string;
+  description: string;
+  features?: Feature[];
+  footerButton?: CustomButtonProps;
+  date?: Date;
+  width?: number | string;
+  height?: number | string;
+  minWidth?: number | string;
+  minHeight?: number | string;
+  maxWidth?: number | string;
+  maxHeight?: number | string;
+  headerHeight?: number;
+  headerPadding?: number;
+  headerContentPadding?: number;
+  loading?: "eager" | "lazy";
+  priority?: boolean;
 }
 
 export default function Card({
-    Icon,
-    iconColor,
-    iconBackgroundColor,
-    iconWidth = 32,
-    iconHeight = 32,
-    iconPadding = 4,
-    showFooterTexture = false,
-    backgroundColor = "#ffffff",
-    bannerImage,
-    href,
-    profilePicture,
-    title,
-    description,
-    features = [],
-    footerButton,
-    date,
+  Icon,
+  iconColor,
+  iconBackgroundColor,
+  iconWidth = 32,
+  iconHeight = 32,
+  iconPadding = 4,
+  showFooterTexture = false,
+  backgroundColor = "#ffffff",
+  bannerImage,
+  href,
+  profilePicture,
+  title,
+  description,
+  features = [],
+  footerButton,
+  date,
+  width,
+  height,
+  minWidth,
+  minHeight,
+  maxWidth,
+  maxHeight,
+  headerHeight,
+  headerPadding = 16,
+  headerContentPadding,
+  loading = "lazy",
+  priority = false,
+}: CardProps) {
+  headerHeight ??= bannerImage ? 200 : undefined;
+  headerContentPadding ??= bannerImage ? (headerPadding ? 16 : 8) : 24;
+
+  const cardContainerStyle: CSSProperties = {
+    backgroundColor,
     width,
     height,
     minWidth,
     minHeight,
     maxWidth,
     maxHeight,
-    headerHeight,
-    headerPadding = 16,
-    headerContentPadding,
-    loading = "lazy",
-    priority = false,
-}: CardProps) {
-    headerHeight ??= bannerImage ? 200 : undefined;
-    headerContentPadding ??= bannerImage ? (headerPadding ? 16 : 8) : 24;
+  };
 
-    const cardContent = (
-        <article className={styles.card} aria-labelledby={`${title.replace(/\s+/g, '-')}-title`}>
-            {showFooterTexture && (
-                <>
-                    <div className={styles.halfCircle} aria-hidden="true" />
-                    <div className={styles.halfCircleTop} aria-hidden="true" />
-                </>
-            )}
+  const cardContent = (
+    <article
+      aria-labelledby={`${title.replace(/\s+/g, "-")}-title`}
+      className="relative overflow-hidden rounded-xl text-left transition-shadow duration-300"
+      style={{ boxShadow: showFooterTexture ? "0 4px 12px rgba(0,0,0,0.05)" : undefined }}
+    >
+      {showFooterTexture && (
+        <>
+          <div
+            aria-hidden="true"
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-20 rounded-full border-8 border-[#f8f8ff] pointer-events-none -z-10 w-[510px] h-[510px]"
+          />
+          <div
+            aria-hidden="true"
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[70%] rounded-full border-[16px] border-[#f8f8ff8f] pointer-events-none -z-20 w-[510px] h-[500px]"
+          />
+        </>
+      )}
 
-            <div className={styles.cardContentWrapper}>
-                <div style={{ padding: `${headerPadding}px ${headerPadding}px 0` }}>
-                    <div 
-                        className={styles.cardHeader}
-                        style={{
-                            backgroundImage: bannerImage ? `url(${bannerImage})` : undefined,
-                            backgroundRepeat: "no-repeat",
-                            backgroundSize: "cover",
-                            borderTopRightRadius: 16,
-                            borderTopLeftRadius: 16,
-                            borderBottomLeftRadius: headerPadding ? 16 : 0,
-                            borderBottomRightRadius: headerPadding ? 16 : 0,
-                            height: headerHeight,
-                            padding: headerContentPadding,
-                            paddingBottom: 0,
-                        }}
-                        role={bannerImage ? "img" : undefined}
-                        aria-label={bannerImage ? `Banner for ${title}` : undefined}
-                    >
-                        <div className={styles.headerContainer}>
-                            {profilePicture ? (
-                                <Image
-                                    src={profilePicture}
-                                    alt={`Profile for ${title}`}
-                                    width={40}
-                                    height={40}
-                                    className={styles.avatar}
-                                    loading={loading}
-                                    priority={priority}
-                                    style={{
-                                        backgroundColor: iconBackgroundColor,
-                                    }}
-                                />
-                            ) : Icon ? (
-                                <Icon
-                                    className={styles.icon}
-                                    style={{ 
-                                        backgroundColor: iconBackgroundColor ?? undefined ,
-                                        color: iconColor ?? undefined,
-                                        width: iconWidth,
-                                        height: iconHeight,
-                                        padding: iconPadding,
-                                    }}
-                                    aria-hidden="true"
-                                />
-                            ) : null}
+      <div className="flex flex-col">
+        <div style={{ padding: `${headerPadding}px ${headerPadding}px 0` }}>
+          <div
+            role={bannerImage ? "img" : undefined}
+            aria-label={bannerImage ? `Banner for ${title}` : undefined}
+            className={`rounded-t-xl bg-cover bg-no-repeat`}
+            style={{
+              backgroundImage: bannerImage ? `url(${bannerImage})` : undefined,
+              height: headerHeight,
+              padding: headerContentPadding,
+              paddingBottom: 0,
+            }}
+          >
+            <div className="flex justify-between items-center">
+              {profilePicture ? (
+                <Image
+                  src={profilePicture}
+                  alt={`Profile for ${title}`}
+                  width={40}
+                  height={40}
+                  loading={loading}
+                  priority={priority}
+                  className="rounded-lg object-cover p-4"
+                  style={{ backgroundColor: iconBackgroundColor }}
+                />
+              ) : Icon ? (
+                <Icon
+                  aria-hidden="true"
+                  className="rounded-lg p-1"
+                  style={{
+                    backgroundColor: iconBackgroundColor,
+                    color: iconColor,
+                    width: iconWidth,
+                    height: iconHeight,
+                    padding: iconPadding,
+                  }}
+                />
+              ) : null}
 
-                            {date && (
-                                <time 
-                                    dateTime={date.toISOString()}
-                                    className={styles.time}
-                                    style={{
-                                        backgroundColor: bannerImage ? "#f7f7f9bb" : "#f7f7f9"
-                                    }}
-                                >
-                                    <span className={styles.age}>
-                                        {date.toLocaleDateString('en-US', {
-                                            month: 'short',
-                                            day: '2-digit',
-                                        })}
-                                    </span>
-                                    <span className={styles.year}>{date.getFullYear()}</span>
-                                </time>
-                            )}
-                        </div>
-                    </div>
-                </div>
-
-                <div className={styles.body}>
-                    <h2 id={`${title.replace(/\s+/g, '-')}-title`} className={styles.cardTitle}>
-                        {title}
-                    </h2>
-                    <p className={styles.cardLabel}>{description}</p>
-
-                    {features.length > 0 && (
-                        <ul className={styles.features}>
-                            {features.map((feature, i) => (
-                                <li key={i} className={styles.featureItem}>
-                                    <feature.Icon 
-                                        className={styles.featureIcon} 
-                                        aria-hidden="true"
-                                    />
-                                    <div>
-                                        <strong>{feature.title}</strong>
-                                        {feature.description && (
-                                            <p className={styles.featureDescription}>
-                                                {feature.description}
-                                            </p>
-                                        )}
-                                    </div>
-                                </li>
-                            ))}
-                        </ul>
-                    )}
-
-                    {footerButton && (
-                        <footer className={styles.footer}>
-                            <CustomButton
-                                {...footerButton}
-                                iconStart
-                                aria-label={`${footerButton.title || footerButton.label} for ${title}`}
-                            />
-                        </footer>
-                    )}
-                </div>
+              {date && (
+                <time
+                  dateTime={date.toISOString()}
+                  className="flex items-center h-[50px] rounded-full px-4 py-2"
+                  style={{ backgroundColor: bannerImage ? "#f7f7f9bb" : "#f7f7f9" }}
+                >
+                  <span className="text-xs font-semibold pr-2">
+                    {date.toLocaleDateString("en-US", {
+                      month: "short",
+                      day: "2-digit",
+                    })}
+                  </span>
+                  <span className="text-xs rounded-full bg-indigo-600 px-4 py-3 text-white">
+                    {date.getFullYear()}
+                  </span>
+                </time>
+              )}
             </div>
-        </article>
-    );
-
-    const cardContainerStyle: CSSProperties = {
-        backgroundColor,
-        width,
-        height,
-        minWidth,
-        minHeight,
-        maxWidth,
-        maxHeight
-    };
-
-    return href ? (
-        <Link
-            href={href}
-            aria-label={`View details for ${title}`}
-            className={`${styles.cardContainer} ${styles.activeCard}`}
-            style={cardContainerStyle}
-            passHref
-        >
-            {cardContent}
-        </Link>
-    ) : (
-        <div
-            className={styles.cardContainer}
-            style={cardContainerStyle}
-            role="group"
-            aria-labelledby={`${title.replace(/\s+/g, '-')}-title`}
-        >
-            {cardContent}
+          </div>
         </div>
-    );
+
+        <div className="p-6 flex flex-col">
+          <h2
+            id={`${title.replace(/\s+/g, "-")}-title`}
+            className="text-2xl font-semibold text-[#13142A] mb-2"
+          >
+            {title}
+          </h2>
+          <p className="text-sm text-gray-500">{description}</p>
+
+          {features.length > 0 && (
+            <ul className="pt-8 flex flex-col gap-4 items-center w-full list-none m-0">
+              {features.map((feature, i) => (
+                <li
+                  key={i}
+                  className={`flex gap-2 items-center bg-gray-100 px-3 py-2 rounded-xl max-w-[80%] border border-black border-opacity-5 transition-transform duration-300 ${
+                    i % 2 === 0 ? "-translate-x-8" : "translate-x-8"
+                  }`}
+                >
+                  <feature.Icon
+                    aria-hidden="true"
+                    className="text-indigo-600 w-6 h-6 flex-shrink-0"
+                  />
+                  <div className="overflow-hidden whitespace-nowrap w-full inline-block mask-gradient">
+                    <strong>{feature.title}</strong>
+                    {feature.description && (
+                      <p className="text-xs text-gray-600">{feature.description}</p>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {footerButton && (
+            <footer className="mt-8">
+              <CustomButton
+                {...footerButton}
+                iconStart
+                aria-label={`${footerButton.title || footerButton.label} for ${title}`}
+              />
+            </footer>
+          )}
+        </div>
+      </div>
+    </article>
+  );
+
+  return href ? (
+    <Link
+      href={href}
+      aria-label={`View details for ${title}`}
+      className="block max-w-[450px] rounded-xl shadow-md text-left relative overflow-hidden transition-shadow duration-300 hover:shadow-indigo-500/50"
+      style={cardContainerStyle}
+      passHref
+    >
+      {cardContent}
+    </Link>
+  ) : (
+    <div
+      role="group"
+      aria-labelledby={`${title.replace(/\s+/g, "-")}-title`}
+      className="max-w-[450px] rounded-xl shadow-md text-left relative overflow-hidden"
+      style={cardContainerStyle}
+    >
+      {cardContent}
+    </div>
+  );
 }

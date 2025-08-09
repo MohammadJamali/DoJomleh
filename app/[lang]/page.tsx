@@ -1,12 +1,12 @@
 import { getDictionary } from "../../lib/get-dictionary";
 import { Locale } from "../../lib/i18n-config";
-import SectionCallToAction from "../components/sections/SectionCallToAction/SectionCallToAction";
+import SectionCallToAction from "../components/sections/SectionCallToAction";
 import SectionMostViewed from "../components/sections/SectionMostViewed";
-import SectionStatistics from "../components/sections/SectionStatistics/SectionStatistics";
-import SectionChallenges from "../components/sections/SectionChallenges/SectionChallenges";
+import SectionStatistics from "../components/sections/SectionStatistics";
+import SectionChallenges from "../components/sections/SectionChallenges";
 import SectionSubscription from "../components/sections/SectionSubscription";
 import SectionFooter from "../components/sections/SectionFooter";
-import SectionRecentContents from "../components/sections/SectionRecentContents/SectionRecentContents";
+import SectionRecentContents from "../components/sections/SectionRecentContents";
 import KBar from "../components/core/HeaderNavigation/KBar";
 import { Navbar } from "../components/core/HeaderNavigation/Navbar";
 import SectionDownload from "../components/sections/SectionDownload";
