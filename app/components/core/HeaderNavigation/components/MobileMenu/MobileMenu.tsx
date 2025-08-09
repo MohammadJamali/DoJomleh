@@ -2,6 +2,8 @@ import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import Link from 'next/link';
 import { JSX } from "react";
+import { Dictionary } from "@/lib/dictionary-types";
+import User from "../User";
 
 export interface MenuLinksProps {
   menuLinks: MenuLinks[];
@@ -34,9 +36,10 @@ export interface ExtraLink {
 
 interface MobileMenuProps {
   menuLinks: MenuLinks[];
+  localization: Dictionary;
 }
 
-export const MobileMenu = ({ menuLinks }: MobileMenuProps) => {
+export const MobileMenu = ({ menuLinks, localization }: MobileMenuProps) => {
   const [expandedLinkId, setExpandedLinkId] = useState<number | null>(null);
 
   const onMenuItemClick = (index: number) => {

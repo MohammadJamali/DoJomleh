@@ -6,12 +6,12 @@ import { i18n, type Locale } from "../../lib/i18n-config";
 import { CSSProperties, HTMLAttributes } from "react";
 
 export const metadata: Metadata = {
-  title: 'KKR‑style Investment Firm',
-  description: 'Your trusted worldwide investment firm...',
+  title: 'DoJomle',
+  description: 'Even the longest contents can be summarized In 2Sentences (DoJomle)',
   openGraph: {
-    title: 'KKR‑style Investment Firm',
-    description: 'Delivering deep expertise...',
-    url: 'https://your-domain.com',
+    title: 'DoJomle',
+    description: 'Even the longest contents can be summarized In 2Sentences (DoJomle)',
+    url: 'https://DoJomle.ir',
     type: 'website',
   },
 };
@@ -24,8 +24,6 @@ export const viewport = {
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
-
-
 
 export default async function Root(props: {
   children: React.ReactNode
@@ -44,7 +42,7 @@ export default async function Root(props: {
   return (
     <html lang={lang} dir={dir} style={font}>
       <Head>
-        <link rel="canonical" />
+        <link rel="canonical"  />
       </Head>
       <body>{children}</body>
     </html>

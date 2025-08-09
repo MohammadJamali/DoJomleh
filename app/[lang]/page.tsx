@@ -18,7 +18,7 @@ export default async function Home(props: {
   const { lang } = await props.params;
   const localization = await getDictionary(lang);
 
-  return <KBar>
+  return <div>
     <Navbar localization={localization} />
     <main>
       <SectionCallToAction localization={localization} />
@@ -38,5 +38,5 @@ export default async function Home(props: {
       <SectionSubscription localization={localization} />
       <SectionFooter localization={localization} />
     </main>
-  </KBar>
+  </div>
 }

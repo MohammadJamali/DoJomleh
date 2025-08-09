@@ -8,8 +8,9 @@ import { MenuLinks } from "./components/Menu/MenuLinks";
 import { MobileMenu } from "./components/MobileMenu/MobileMenu";
 import { KbarInput } from "./components/KbarInput";
 import { Dictionary } from '@/lib/dictionary-types';
-import User from "./components/User";
+import dynamic from "next/dynamic";
 
+const User = dynamic(() => import("./components/User"), { ssr: false });
 
 export const Navbar = ({ localization }: { localization: Dictionary }) => {
   // const location = useLocation();
@@ -46,12 +47,15 @@ export const Navbar = ({ localization }: { localization: Dictionary }) => {
           <div className="absolute block transform -translate-x-1/2 md:hidden left-1/2">
             <CompanyLogo localization={localization} />
           </div>
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex items-center justify-center gap-4 hidden md:block">
             <User localization={localization} />
           </div>
         </div>
         <div className="md:hidden">
-          {isMobileMenuOpen && <MobileMenu menuLinks={getNavigationLinks({localization})} />}
+          {isMobileMenuOpen && <MobileMenu
+           menuLinks={getNavigationLinks({localization})} 
+           localization={localization}
+           />}
         </div>
       </nav>
     </>
