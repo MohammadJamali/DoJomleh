@@ -2,8 +2,8 @@ import { Dictionary } from '@/lib/dictionary-types';
 import { ArrowUpRightIcon } from '@heroicons/react/16/solid';
 import { PlayIcon } from '@heroicons/react/24/outline';
 import SectionBase from './SectionBase';
-import { CustomButton } from '../core/CustomButton/CustomButton';
-import SectionReviewCarousel from '../modules/SectionReviewCarousel';
+import { CustomButton } from '../../core/CustomButton/CustomButton';
+import SectionReviewCarousel from '../../modules/SectionReviewCarousel';
 
 export default async function SectionCallToAction({ localization }: { localization: Dictionary }) {
     return <SectionBase

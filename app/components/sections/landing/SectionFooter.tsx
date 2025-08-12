@@ -1,10 +1,10 @@
-import { CustomButton } from "../core/CustomButton/CustomButton";
-import { CompanyLogo } from "../core/HeaderNavigation/components/CompanyLogo";
+import { CustomButton } from "../../core/CustomButton/CustomButton";
+import { CompanyLogo } from "../../core/HeaderNavigation/components/CompanyLogo";
 import { Dictionary } from "@/lib/dictionary-types";
-import { LucideTwitterIcon } from "../core/Icons/LucideTwitterIcon";
-import { LucideYoutubeIcon } from "../core/Icons/LucideYoutubeIcon";
-import { LucideInstagramIcon } from "../core/Icons/LucideInstagramIcon";
-import { TablerBrandTelegramIcon } from "../core/Icons/TablerBrandTelegramIcon";
+import { LucideTwitterIcon } from "../../core/Icons/LucideTwitterIcon";
+import { LucideYoutubeIcon } from "../../core/Icons/LucideYoutubeIcon";
+import { LucideInstagramIcon } from "../../core/Icons/LucideInstagramIcon";
+import { TablerBrandTelegramIcon } from "../../core/Icons/TablerBrandTelegramIcon";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 

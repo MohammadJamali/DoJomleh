@@ -1,15 +1,15 @@
 import { getDictionary } from "../../lib/get-dictionary";
 import { Locale } from "../../lib/i18n-config";
-import SectionCallToAction from "../components/sections/SectionCallToAction";
-import SectionMostViewed from "../components/sections/SectionMostViewed";
-import SectionStatistics from "../components/sections/SectionStatistics";
-import SectionChallenges from "../components/sections/SectionChallenges";
-import SectionSubscription from "../components/sections/SectionSubscription";
-import SectionFooter from "../components/sections/SectionFooter";
-import SectionRecentContents from "../components/sections/SectionRecentContents";
+import SectionCallToAction from "../components/sections/landing/SectionCallToAction";
+import SectionMostViewed from "../components/sections/landing/SectionMostViewed";
+import SectionStatistics from "../components/sections/landing/SectionStatistics";
+import SectionChallenges from "../components/sections/landing/SectionChallenges";
+import SectionSubscription from "../components/sections/landing/SectionSubscription";
+import SectionFooter from "../components/sections/landing/SectionFooter";
+import SectionRecentContents from "../components/sections/landing/SectionRecentContents";
 import KBar from "../components/core/HeaderNavigation/KBar";
 import { Navbar } from "../components/core/HeaderNavigation/Navbar";
-import SectionDownload from "../components/sections/SectionDownload";
+import SectionDownload from "../components/sections/landing/SectionDownload";
 
 
 export default async function Home(props: {

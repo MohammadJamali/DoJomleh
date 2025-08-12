@@ -1,6 +1,6 @@
-import { getHeroIcon } from "../core/Icons/IconAsString";
+import { getHeroIcon } from "../../core/Icons/IconAsString";
 import SectionBase from "./SectionBase";
-import PresentationCard from "../core/PresentationCard";
+import PresentationCard from "../../core/PresentationCard";
 import { Dictionary } from "@/lib/dictionary-types";
 
 export default function SectionChallenges({ localization }: { localization: Dictionary }) {

@@ -1,6 +1,6 @@
 import { CheckIcon, SparklesIcon } from '@heroicons/react/24/outline';
-import Card from '../core/Cards/Card';
-import CardGrid from '../core/Cards/CardGrid';
+import Card from '../../core/Cards/Card';
+import CardGrid from '../../core/Cards/CardGrid';
 import SectionBase from "./SectionBase";
 import { Dictionary } from '@/lib/dictionary-types';
 import { randomInt } from 'crypto';

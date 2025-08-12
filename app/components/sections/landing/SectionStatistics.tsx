@@ -1,15 +1,15 @@
 'use client';
 
 import SectionBase from './SectionBase'
-import SideBySideSplit from '../core/SideBySideSplit'
-import Card from '../core/Cards/Card'
-import { CustomButtonProps } from '../core/CustomButton/CustomButton'
+import SideBySideSplit from '../../core/SideBySideSplit'
+import Card from '../../core/Cards/Card'
+import { CustomButtonProps } from '../../core/CustomButton/CustomButton'
 import { Dictionary } from '@/lib/dictionary-types'
 
 import {
   ArrowUpRightIcon,
 } from "@heroicons/react/24/outline";
-import { getHeroIcon } from '../core/Icons/IconAsString';
+import { getHeroIcon } from '../../core/Icons/IconAsString';
 
 interface SectionStatisticsProps {
   localization: Dictionary;

@@ -1,8 +1,8 @@
 import { ArrowUpRightIcon } from "@heroicons/react/16/solid";
-import Card from "../core/Cards/Card";
-import CardGrid from "../core/Cards/CardGrid";
 import SectionBase from "./SectionBase";
 import { Dictionary } from "@/lib/dictionary-types";
+import CardGrid from "../../core/Cards/CardGrid";
+import Card from "../../core/Cards/Card";
 
 export default function SectionMostViewed({ localization }: { localization: Dictionary }) {
     return <SectionBase

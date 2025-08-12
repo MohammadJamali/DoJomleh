@@ -1,4 +1,4 @@
-import { CustomButton } from "../core/CustomButton/CustomButton";
+import { CustomButton } from "../../core/CustomButton/CustomButton";
 import Head from "next/head";
 import { FaApple, FaAndroid } from "react-icons/fa";
 
