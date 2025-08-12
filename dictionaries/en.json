@@ -271,5 +271,23 @@
     "articleBody": "To get rich, focus on increasing your income by pursuing high-demand skills and opportunities. Invest wisely in stocks, real estate, or businesses to grow your wealth over time. Practice disciplined saving and avoid unnecessary expenses to build a strong financial foundation.",
     "tipOne": "Set aside a portion of your income regularly",
     "reminder": "Stay informed about economic trends and opportunities"
+  },
+  "request": {
+    "requestA": "Request a",
+    "new": "New",
+    "summarization": "Summarization",
+    "subtitle": "Please provide the necessary details below",
+    "uploadFile": "Upload an audio or video file",
+    "fileExtentions": "MP3, WAV, MP4 — (10 MB max)",
+    "remove": "Remove",
+    "disabledFile": "File upload disabled when URL is set",
+    "summarizationPrompt": "Summarization Prompt",
+    "tags": "Tags",
+    "tagsRemaining":"tags remaining",
+    "addTags":"Add tags (e.g. design, product...)",
+    "cancel": "Cancel",
+    "request": "Request",
+    "acceptingRequest": "Accepting Request",
+    "urlLabel": "Url"
   }
 }

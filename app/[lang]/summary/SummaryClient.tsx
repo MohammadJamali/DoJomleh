@@ -52,7 +52,7 @@ export default function SummaryClient({ data, localization }: Props) {
     return (
         <section className="fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-md z-50 h-screen">
             <article
-                className="bg-white backdrop-blur-lg rounded-xl shadow-lg max-h-screen w-lx p-6 m-4 text-gray-800"
+                className="bg-white backdrop-blur-lg rounded-xl shadow-lg max-h-screen w-xl p-6 m-4 text-gray-800"
                 itemScope
                 itemType="https://schema.org/Article"
             >
