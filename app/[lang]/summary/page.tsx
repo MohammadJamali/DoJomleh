@@ -6,8 +6,11 @@ import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 import SummaryClient from "./SummaryClient";
 
-export default async function Summary({ params }: { params: { lang: Locale } }) {
-  const localization = await getDictionary(params.lang);
+export default async function Page(props: {
+  params: Promise<{ lang: Locale }>;
+}) {
+  const { lang } = await props.params;
+  const localization = await getDictionary(lang);
 
   const processedContent = await remark()
     .use(remarkParse)

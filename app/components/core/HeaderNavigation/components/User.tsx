@@ -105,9 +105,9 @@ function WalletMenu({ localization }: { localization: Dictionary }) {
     },
   ];
 
-  let className = "-left-[245px] md:-left-[45px]";
+  let className = "-left-[245px] md:-left-[105px]";
   if (localization.rtl) {
-    className = "-right-[250px] md:-right-[60px]";
+    className = "-right-[245px] md:-right-[135px]";
   }
 
   return (

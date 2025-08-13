@@ -3,8 +3,11 @@ import { getDictionary } from "@/lib/get-dictionary";
 import UploadCard from "./UploadCard";
 import { Locale } from "@/lib/i18n-config";
 
-export default async function Page({ params }: { params: { lang: Locale } }) {
-  const localization = await getDictionary(params.lang);
+export default async function Page(props: {
+  params: Promise<{ lang: Locale }>;
+}) {
+  const { lang } = await props.params;
+  const localization = await getDictionary(lang);
   
   const data = {
     image: "/images/form-screenshot.jpg", // see instructions below

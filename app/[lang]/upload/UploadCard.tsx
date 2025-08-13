@@ -207,9 +207,9 @@ export default function UploadCard({ data, localization }: Props) {
                         <h2 id="upload-title" className="text-xl font-semibold items-center">
                             <p className="flex items-center">{localization.request.requestA} <FaFileCirclePlus className="size-10 h-6 p-1 mx-2 rounded-xl bg-gray-200 border-gray-200 text-gray-600" /></p>
                             {
-                                localization.rtl 
-                                ? <p><span className="text-gray-400">{localization.request.summarization}</span> {localization.request.new}</p>
-                                : <p>{localization.request.new} <span className="text-gray-400">{localization.request.summarization}</span></p>
+                                localization.rtl
+                                    ? <p><span className="text-gray-400">{localization.request.summarization}</span> {localization.request.new}</p>
+                                    : <p>{localization.request.new} <span className="text-gray-400">{localization.request.summarization}</span></p>
                             }
                         </h2>
                         <p className="text-xs mt-3 text-gray-500">
@@ -218,9 +218,21 @@ export default function UploadCard({ data, localization }: Props) {
                     </div>
 
                     <div className="relative">
-                        <FaPodcast className={`absolute -bottom-3 ${localization.rtl ? "left" : "right"}-16 size-10 p-2 rounded-lg border border-2 focus:outline-none bg-white border-gray-200 text-gray-600`} />
-                        <FaYoutube className={`absolute bottom-0 ${localization.rtl ? "left" : "right"}-8 rotate-15 size-10 p-2 rounded-lg border border-2 focus:outline-none bg-white border-gray-200 text-gray-600`} />
-                        <FaTelegram className={`absolute -bottom-3 ${localization.rtl ? "left" : "right"}-0 -rotate-15 size-10 p-2 rounded-lg border border-2 focus:outline-none bg-white border-gray-200 text-gray-600`} />
+                        <FaPodcast className={
+                            `absolute -bottom-3 size-10 p-2 rounded-lg 
+                            border border-2 focus:outline-none bg-white 
+                            border-gray-200 text-gray-600`
+                        } style={{ [localization.rtl ? "left" : "right"]: 64 }} />
+                        <FaYoutube className={
+                            `absolute bottom-0 rotate-15 size-10 p-2 
+                            rounded-lg border border-2 focus:outline-none 
+                            bg-white border-gray-200 text-gray-600
+                        `} style={{ [localization.rtl ? "left" : "right"]: 32 }} />
+                        <FaTelegram className={
+                            `absolute -bottom-3 -rotate-15 size-10 p-2 
+                            rounded-lg border border-2 focus:outline-none 
+                            bg-white border-gray-200 text-gray-600
+                        `} style={{ [localization.rtl ? "left" : "right"]: 0 }} />
                     </div>
                 </header>
 
@@ -310,11 +322,11 @@ export default function UploadCard({ data, localization }: Props) {
                             {/* Prompt */}
                             <div>
                                 <label className="text-sm text-gray-700 block mb-1">{localization.request.summarizationPrompt} <span className="text-red-500">*</span></label>
-                                <textarea 
-                                value={description} 
-                                onChange={(e) => setDescription(e.target.value)} 
-                                rows={4} 
-                                className="w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2"  />
+                                <textarea
+                                    value={description}
+                                    onChange={(e) => setDescription(e.target.value)}
+                                    rows={4}
+                                    className="w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2" />
                             </div>
 
                             {/* Tags */}

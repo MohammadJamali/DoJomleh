@@ -12,7 +12,7 @@ import { Navbar } from "../components/core/HeaderNavigation/Navbar";
 import SectionDownload from "../components/sections/landing/SectionDownload";
 
 
-export default async function Home(props: {
+export default async function Page(props: {
   params: Promise<{ lang: Locale }>;
 }) {
   const { lang } = await props.params;
