@@ -10,6 +10,7 @@ import SectionRecentContents from "../components/sections/landing/SectionRecentC
 import KBar from "../components/core/HeaderNavigation/KBar";
 import { Navbar } from "../components/core/HeaderNavigation/Navbar";
 import SectionDownload from "../components/sections/landing/SectionDownload";
+import getNavigationLinks from "../components/core/HeaderNavigation/Links";
 
 
 export default async function Page(props: {
@@ -19,7 +20,7 @@ export default async function Page(props: {
   const localization = await getDictionary(lang);
 
   return <div>
-    <Navbar localization={localization} />
+    <Navbar localization={localization}  menuLinks={getNavigationLinks({localization})}/>
     <main>
       <SectionCallToAction localization={localization} />
       <SectionRecentContents localization={localization} />

@@ -7,12 +7,30 @@ import { LucideInstagramIcon } from "../../core/Icons/LucideInstagramIcon";
 import { TablerBrandTelegramIcon } from "../../core/Icons/TablerBrandTelegramIcon";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import Divider from "../../core/Devider";
 
-export default function SectionFooter({ localization }: { localization: Dictionary }) {
+interface SectionFooterProps {
+  localization: Dictionary;
+  maxWidth?: string;
+}
+
+export default function SectionFooter({ localization, maxWidth = "1200px" }: SectionFooterProps) {
+  const containerClass = `mx-auto box-border w-full max-w-[${maxWidth}]`;
+
+  const socialLinks = [
+    { href: "https://x.com/dojomleh", label: "Twitter profile", Icon: LucideTwitterIcon },
+    { href: "https://t.me/dojomleh", label: "Telegram channel", Icon: TablerBrandTelegramIcon },
+    { href: "https://www.youtube.com/@dojomleh", label: "YouTube channel", Icon: LucideYoutubeIcon },
+    { href: "https://www.instagram.com/dojomleh/", label: "Instagram profile", Icon: LucideInstagramIcon },
+  ];
+
   return (
     <footer role="contentinfo" className="w-full">
-      <div className="max-w-[1200px] mx-auto box-border w-full grid grid-cols-[2fr_1fr] gap-8 p-8">
-        <div className="p-8 bg-[#f7f7f9] rounded-[24px] flex flex-col justify-between gap-4">
+      {/* Top Grid */}
+      <div className={`${containerClass} grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8 p-6 md:p-8`}>
+        
+        {/* Contact + Social */}
+        <div className="p-6 md:p-8 bg-[#f7f7f9] rounded-[24px] flex flex-col justify-between gap-6">
           <div className="flex flex-col gap-4">
             <CompanyLogo localization={localization} />
             <p itemProp="description">{localization.footer.contact.description}</p>
@@ -20,47 +38,25 @@ export default function SectionFooter({ localization }: { localization: Dictiona
 
           <div className="flex flex-col gap-4">
             <span className="sr-only">{localization.footer.contact.stayConnected}</span>
-            <div
-              aria-label="Social media links"
-              className="flex flex-row gap-4"
-            >
-              <a
-                href="https://x.com/dojomleh"
-                aria-label="Twitter profile"
-                rel="noopener noreferrer"
-                className="w-6 h-6 text-current hover:text-[#7478f8] transition-transform duration-200 ease-in-out hover:scale-110"
-              >
-                <LucideTwitterIcon />
-              </a>
-              <a
-                href="https://t.me/dojomleh"
-                aria-label="Telegram channel"
-                rel="noopener noreferrer"
-                className="w-6 h-6 text-current hover:text-[#7478f8] transition-transform duration-200 ease-in-out hover:scale-110"
-              >
-                <TablerBrandTelegramIcon />
-              </a>
-              <a
-                href="https://www.youtube.com/@dojomleh"
-                aria-label="YouTube channel"
-                rel="noopener noreferrer"
-                className="w-6 h-6 text-current hover:text-[#7478f8] transition-transform duration-200 ease-in-out hover:scale-110"
-              >
-                <LucideYoutubeIcon />
-              </a>
-              <a
-                href="https://www.instagram.com/dojomleh/"
-                aria-label="Instagram profile"
-                rel="noopener noreferrer"
-                className="w-6 h-6 text-current hover:text-[#7478f8] transition-transform duration-200 ease-in-out hover:scale-110"
-              >
-                <LucideInstagramIcon />
-              </a>
+            <div aria-label="Social media links" className="flex gap-4">
+              {socialLinks.map(({ href, label, Icon }) => (
+                <a
+                  key={href}
+                  href={href}
+                  aria-label={label}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="w-6 h-6 text-current hover:text-[#7478f8] transition-transform duration-200 hover:scale-110"
+                >
+                  <Icon />
+                </a>
+              ))}
             </div>
           </div>
         </div>
 
-        <div className="p-8 bg-[#f7f7f9] rounded-[24px] flex flex-col justify-between gap-4">
+        {/* Footer Buttons */}
+        <div className="p-6 md:p-8 bg-[#f7f7f9] rounded-[24px] flex flex-col gap-4">
           {localization.footer.buttons.map((button) => (
             <CustomButton
               key={button.name}
@@ -75,23 +71,24 @@ export default function SectionFooter({ localization }: { localization: Dictiona
         </div>
       </div>
 
-      <span className="block border-t border-[#f0f0f1] w-full h-px" aria-hidden="true"></span>
+      <Divider />
 
-      <div className="max-w-[1200px] mx-auto box-border p-6 flex justify-between items-center w-full">
+      {/* Bottom Bar */}
+      <div className={`${containerClass} p-6 flex flex-col md:flex-row justify-between items-center gap-4`}>
         <p itemProp="copyrightNotice">{localization.footer.copywrite}</p>
-        <ul className="flex flex-row gap-4 list-none p-0 m-0">
+        <ul className="flex flex-wrap gap-4">
           <li>
-            <Link href="/privacy-policy" aria-label="Privacy policy" itemProp="url" className="text-inherit no-underline hover:underline">
+            <Link href="/privacy-policy" aria-label="Privacy policy" itemProp="url" className="hover:underline">
               {localization.footer.privacyPolicy}
             </Link>
           </li>
           <li>
-            <Link href="/terms-of-use" aria-label="Terms of use" itemProp="url" className="text-inherit no-underline hover:underline">
+            <Link href="/terms-of-use" aria-label="Terms of use" itemProp="url" className="hover:underline">
               {localization.footer.termsOfUse}
             </Link>
           </li>
           <li>
-            <Link href="/sitemap" aria-label="Site map" itemProp="url" className="text-inherit no-underline hover:underline">
+            <Link href="/sitemap" aria-label="Site map" itemProp="url" className="hover:underline">
               {localization.footer.siteMap}
             </Link>
           </li>

@@ -38,11 +38,17 @@ export const MenuLinks = ({ menuLinks }: MenuLinksProps) => {
         <div className="relative group" key={link.name}>{
           link.link
             ? <Link href={link.link} className="flex items-center">
-              <li className="p-2 font-semibold rounded-lg cursor-pointer lg:px-4 text-slate-500 hover:text-slate-700 hover:bg-slate-200 ">
+              <li className="
+                p-2 font-semibold rounded-lg cursor-pointer 
+                lg:px-4 text-slate-500 hover:text-slate-700 
+                hover:bg-slate-200">
                 {link.name}
               </li>
             </Link>
-            : <li className="p-2 font-semibold rounded-lg cursor-pointer lg:px-4 text-slate-500 hover:text-slate-700 hover:bg-slate-200 ">
+            : <li className="
+              p-2 font-semibold rounded-lg cursor-pointer 
+              lg:px-4 text-slate-500 hover:text-slate-700 
+              hover:bg-slate-200 ">
               {link.name}
             </li>
         }

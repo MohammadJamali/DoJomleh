@@ -283,11 +283,51 @@
     "disabledFile": "File upload disabled when URL is set",
     "summarizationPrompt": "Summarization Prompt",
     "tags": "Tags",
-    "tagsRemaining":"tags remaining",
-    "addTags":"Add tags (e.g. design, product...)",
+    "tagsRemaining": "tags remaining",
+    "addTags": "Add tags (e.g. design, product...)",
     "cancel": "Cancel",
     "request": "Request",
     "acceptingRequest": "Accepting Request",
     "urlLabel": "Url"
+  },
+  "explore": {
+    "filters": "Filters",
+    "search": "Search",
+    "sort": {
+      "popular": "Popular",
+      "newest": "Newest",
+      "oldest": "Oldest"
+    },
+    "deselectAll": "Deselect All",
+    "categories": {
+      "label": "Categories"
+    },
+    "sources": {
+      "label": "Sources",
+      "youtube": "YouTube",
+      "telegram": "Telegram",
+      "podcast": "Podcast"
+    },
+    "post": {
+      "like": "Like",
+      "comment": "Comment",
+      "share": "Share",
+      "bookmark": "Bookmark"
+    },
+    "author": {
+      "mail": "Mail",
+      "call": "Call",
+      "more": "More",
+      "lastActivity": "Last Activity",
+      "dealInfo": "Deal Info",
+      "activities": "Activities",
+      "accepted": "Accepted",
+      "new": "New",
+      "inProgress": "In progress",
+      "loanRequested": "Loan Requested",
+      "loanPurpose": "Loan Purpose",
+      "newPurchase": "New Purchase",
+      "loanAmount": "Loan Amount"
+    }
   }
 }

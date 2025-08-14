@@ -129,7 +129,7 @@ function WalletMenu({ localization }: { localization: Dictionary }) {
       <div
         className={`absolute w-72 hidden group-hover:flex flex-col pt-2 ${className}`}
       >
-        <ul className="p-2 bg-white shadow-[rgba(0,_0,_0,_0.24)_0px_0px_40px] shadow-slate-400 rounded-xl">
+        <ul className="p-2 bg-white shadow-[rgba(0,_0,_0,_0.24)_0px_0px_40px] shadow-slate-400 rounded-xl z-10 border-1 border-gray-200">
           {items.map((item) => (
             <li
               key={item.title}

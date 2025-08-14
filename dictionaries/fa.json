@@ -288,5 +288,45 @@
     "request": "درخواست",
     "acceptingRequest": "پذیرای درخواست جدید",
     "urlLabel": "آدرس"
+  },
+  "explore": {
+    "filters": "فیلترها",
+    "search": "جست‌‌وجو",
+    "sort": {
+      "popular":"محبوب ها",
+      "newest": "جدید ها",
+      "oldest": "قدیمی ها"
+    },
+    "deselectAll": "لغو انتخاب‌ها",
+    "categories": {
+      "label": "دسته‌بندی‌ها"
+    },
+    "sources": {
+      "label": "منابع",
+      "youtube": "یوتیوب",
+      "telegram": "تلگرام",
+      "podcast": "پادکست"
+    },
+    "post": {
+      "like": "لایک",
+      "comment": "نظرات",
+      "share": "اشتراک‌گذاری",
+      "bookmark": "نشانه‌گذاری"
+    },
+    "author": {
+      "mail": "ایمیل",
+      "call": "تماس",
+      "more": "بیشتر",
+      "lastActivity": "آخرین فعالیت",
+      "dealInfo": "اطلاعات معامله",
+      "activities": "فعالیت‌ها",
+      "accepted": "پذیرفته شد",
+      "new": "جدید",
+      "inProgress": "در حال انجام",
+      "loanRequested": "درخواست وام",
+      "loanPurpose": "هدف وام",
+      "newPurchase": "خرید جدید",
+      "loanAmount": "مبلغ وام"
+    }
   }
 }

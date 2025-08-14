@@ -5,7 +5,7 @@ export const SubLinksBox = (props: SubLinksBoxProps) => {
   const { subLinks, extraLinks } = props;
   return (
     <div className="absolute pt-2 top-10 w-fit  hidden group-hover:flex">
-      <div className="w-fit bg-white shadow-[rgba(0,_0,_0,_0.24)_0px_0px_40px] shadow-slate-400 rounded-xl">
+      <div className="w-fit bg-white shadow-[rgba(0,_0,_0,_0.24)_0px_0px_40px]  shadow-slate-400 rounded-xl z-10 border-1 border-gray-200">
         <ul className="p-2 h-fit w-96 flex-col ">
           {subLinks.map((subLink) => (
             <li
@@ -14,7 +14,7 @@ export const SubLinksBox = (props: SubLinksBoxProps) => {
             >
               <Link href={subLink.link} className="flex items-center">
                 <div className={`h-10 w-10 mx-2.5 flex items-center justify-center rounded-lg ${subLink.color}`}>
-                  <div className="text-white ">
+                  <div className="text-white">
                     {subLink.icon}
                   </div>
                 </div>

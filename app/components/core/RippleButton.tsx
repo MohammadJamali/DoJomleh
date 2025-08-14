@@ -1,16 +1,16 @@
 "use client";
 import { useState } from "react";
 
-interface RippleButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface RippleProps extends React.ButtonHTMLAttributes<HTMLElement> {
   children: React.ReactNode;
 }
 
-export default function RippleButton({ children, className = "", ...props }: RippleButtonProps) {
+export default function RippleButton({ children, className = "", ...props }: RippleProps) {
   const [ripples, setRipples] = useState<
     { x: number; y: number; size: number; key: number }[]
   >([]);
 
-  const createRipple = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const createRipple = (e: React.MouseEvent<HTMLElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const size = Math.max(rect.width, rect.height);
     const x = e.clientX - rect.left - size / 2;
@@ -23,13 +23,13 @@ export default function RippleButton({ children, className = "", ...props }: Rip
   };
 
   return (
-    <button
+    <div
       {...props}
       onClick={(e) => {
         createRipple(e);
         props.onClick?.(e);
       }}
-      className={`relative overflow-hidden ${className}`}
+      className={`relative overflow-hidden ${className} cursor-pointer`}
     >
       {children}
       {ripples.map((r) => (
@@ -44,6 +44,6 @@ export default function RippleButton({ children, className = "", ...props }: Rip
           }}
         />
       ))}
-    </button>
+    </div>
   );
 }
