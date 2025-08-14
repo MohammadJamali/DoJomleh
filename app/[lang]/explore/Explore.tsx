@@ -221,10 +221,10 @@ export default function Explore({ localization }: {
                 </header>
 
                 {/* Author & Content */}
-                <div className="flex flex-col lg:flex-row lg:min-h-200">
+                <div className="flex flex-col lg:flex-row lg:min-h-200 ">
                     <section className={`
                         pt-4 border-gray-200 border-b lg:border-b-0 
-                        md:border-${localization.rtl ? "l" : "r"} w-full lg:w-100
+                        md:border-${localization.rtl ? "l" : "r"} w-full lg:w-80 min-w-80
                     `}>
                         <AuthorBanner
                             localization={localization}
@@ -245,7 +245,7 @@ export default function Explore({ localization }: {
                     </section>
 
                     <section className="grid place-content-start m-4 gap-8" style={{
-                        gridTemplateColumns: `repeat(auto-fit, minmax(4 00px, 1fr))`,
+                        gridTemplateColumns: `repeat(auto-fit, minmax(400px, 1fr))`,
                     }}>
                         {loadingState === "loading" ? (
                             <>

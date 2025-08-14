@@ -174,7 +174,7 @@ export default function Card({
               {features.map((feature, i) => (
                 <li
                   key={i}
-                  className={`flex gap-2 items-center bg-gray-100 px-3 py-2 rounded-xl max-w-[80%] border border-black border-opacity-5 transition-transform duration-300 ${
+                  className={`flex gap-2 items-center bg-gray-50 px-3 py-2 rounded-xl max-w-[80%] border border-black border-opacity-5 transition-transform duration-300 ${
                     i % 2 === 0 ? "-translate-x-8" : "translate-x-8"
                   }`}
                 >

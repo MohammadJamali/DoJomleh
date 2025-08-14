@@ -52,7 +52,7 @@ export default function SummaryClient({ data, localization }: Props) {
     return (
         <section className="fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-md z-50 h-screen">
             <article
-                className="bg-white backdrop-blur-lg rounded-xl shadow-lg max-h-screen w-xl p-6 m-4 text-gray-800"
+                className="bg-white backdrop-blur-lg rounded-xl shadow-lg max-h-screen w-3xl p-6 m-4 text-gray-800"
                 itemScope
                 itemType="https://schema.org/Article"
             >
@@ -147,7 +147,7 @@ export default function SummaryClient({ data, localization }: Props) {
                                 </div>
                                 <div className="flex items-start gap-2">
                                     <div className="w-8 flex justify-center pt-1 text-gray-600"><GoPencil /></div>
-                                    <div className="text-xs text-gray-400 w-28">{data.descriptionLabel}</div>
+                                    <div className="text-xs text-gray-400 w-28">{localization.summary.abstractLabel}</div>
                                     <p className="leading-snug">Lorem ipsum dolor sit amet...</p>
                                 </div>
                             </div>

@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa6";
 import styles from "./upload-card.module.css";
 import { Dictionary } from "@/lib/dictionary-types";
+import RippleButton from "@/app/components/core/RippleButton";
 
 type Props = {
     localization: Dictionary;
@@ -130,23 +131,6 @@ export default function UploadCard({ data, localization }: Props) {
         }
     };
 
-    // ripple
-    const createRipple = (e: React.MouseEvent<HTMLButtonElement>) => {
-        const btn = reminderBtnRef.current;
-        if (!btn) return;
-        const circle = document.createElement("span");
-        const diameter = Math.max(btn.clientWidth, btn.clientHeight);
-        const radius = diameter / 2;
-        circle.style.width = circle.style.height = `${diameter}px`;
-        circle.style.left = `${e.clientX - btn.getBoundingClientRect().left - radius}px`;
-        circle.style.top = `${e.clientY - btn.getBoundingClientRect().top - radius}px`;
-        circle.className = styles.ripple;
-        const prev = btn.getElementsByClassName(styles.ripple)[0];
-        if (prev) prev.remove();
-        btn.appendChild(circle);
-    };
-
-    const headIconClasses = "";
 
     // file handling: audio/video only
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -374,17 +358,18 @@ export default function UploadCard({ data, localization }: Props) {
                     <div className="flex items-center gap-3">
                         <button onClick={() => handleAction("cancel")} className="px-4 py-2 border rounded-md">{localization.request.cancel}</button>
 
-                        <button
-                            ref={reminderBtnRef}
-                            onClick={(e) => {
-                                createRipple(e);
-                                handleAction("schedule");
-                            }}
-                            className="relative overflow-hidden px-5 py-2 rounded-md bg-slate-900 text-white flex items-center gap-2"
-                        >
-                            <FaSignature />
-                            <span>{localization.request.request}</span>
-                        </button>
+                        <RippleButton>
+                            <button
+                                ref={reminderBtnRef}
+                                onClick={(e) => {
+                                    handleAction("request");
+                                }}
+                                className="relative overflow-hidden px-5 py-2 rounded-md bg-slate-900 text-white flex items-center gap-2"
+                            >
+                                <FaSignature />
+                                <span>{localization.request.request}</span>
+                            </button>
+                        </RippleButton>
                     </div>
                 </footer>
             </div>
