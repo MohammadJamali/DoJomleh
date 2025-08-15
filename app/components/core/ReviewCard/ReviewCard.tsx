@@ -1,76 +1,7 @@
-// import { useState, useEffect } from 'react';
-// import styles from "./ReviewCard.module.css";
-// import { LucideQuoteIcon } from '@/app/components/core/Icons/LucideQuoteIcon';
-
-// interface ReviewCardProps {
-//   dir: "rtl" | "ltr";
-//   label: string;
-//   review: any;
-//   isVisible: boolean;
-//   onAnimationEnd: CallableFunction;
-// }
-
-// export default function ReviewCard({ dir, label, review, isVisible, onAnimationEnd }: ReviewCardProps) {
-//   const [localVisible, setLocalVisible] = useState(isVisible);
-
-//   useEffect(() => {
-//     if (!isVisible) {
-//       setLocalVisible(false);
-//     } else {
-//       const timer = setTimeout(() => setLocalVisible(true), 50);
-//       return () => clearTimeout(timer);
-//     }
-//   }, [isVisible]);
-
-//   return (
-//     <article
-//       className={`${styles.customerReview} ${localVisible ? styles.enter : styles.exit
-//         }`}
-//       onAnimationEnd={() => {
-//         if (!localVisible && onAnimationEnd) {
-//           onAnimationEnd();
-//         }
-//       }}
-//     >
-//       <header>
-//         <p className={styles.reviewLabel}>{label}</p>
-//         <h2 className={styles.reviewTitle}>{review.title}</h2>
-//       </header>
-
-//       <blockquote className={`
-//         ${styles.reviewQuote}
-//         ${dir === "rtl" ? styles.rtlBorder : styles.ltrBorder}
-//       `}>
-//         {review.quote}
-//       </blockquote>
-
-//       <div className={styles.reviewAuthor}>
-//         <div className={styles.authorAvatar}>
-//           <img
-//             src={review.avatar}
-//             alt={`${review.author} portrait`}
-//             width="80"
-//             height="80"
-//             loading="lazy"
-//           />
-//         </div>
-//         <div className={styles.authorInfo}>
-//           <h3 className={styles.authorName}>{review.author}</h3>
-//           <p className={styles.authorTitle}>{review.association}</p>
-//         </div>
-//       </div>
-
-//       <LucideQuoteIcon className={`
-//         ${styles.quoteIcon}
-//         ${dir === "rtl" ? styles.quoteIconRtl : styles.quoteIconLtr}
-//       `} />
-//     </article>
-//   );
-// }
-
 import { useState, useEffect } from "react";
 import styles from "./ReviewCard.module.css"; // Keep animations here
 import { LucideQuoteIcon } from "@/app/components/core/Icons/LucideQuoteIcon";
+import { FaQuoteLeft } from "react-icons/fa";
 
 interface ReviewCardProps {
   dir: "rtl" | "ltr";
@@ -101,7 +32,7 @@ export default function ReviewCard({
   return (
     <article
       className={`
-        relative max-w-[600px] mx-auto p-6 bg-[#f8f8f8]
+        relative max-w-[600px] mx-auto p-6 bg-white
         rounded-[32px] shadow-[0_4px_32px_rgba(0,0,0,0.05)]
         font-sans overflow-hidden opacity-0 translate-x-[20px]
         ${localVisible ? styles.enter : styles.exit}
@@ -151,7 +82,7 @@ export default function ReviewCard({
         </div>
       </div>
 
-      <LucideQuoteIcon
+      <FaQuoteLeft
         className={`
           absolute text-indigo-600/10 text-[8rem] z-0
           ${dir === "rtl" ? "bottom-5 left-5" : "bottom-5 right-5"}

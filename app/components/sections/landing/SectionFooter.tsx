@@ -1,13 +1,10 @@
 import { CustomButton } from "../../core/CustomButton/CustomButton";
 import { CompanyLogo } from "../../core/HeaderNavigation/components/CompanyLogo";
 import { Dictionary } from "@/lib/dictionary-types";
-import { LucideTwitterIcon } from "../../core/Icons/LucideTwitterIcon";
-import { LucideYoutubeIcon } from "../../core/Icons/LucideYoutubeIcon";
-import { LucideInstagramIcon } from "../../core/Icons/LucideInstagramIcon";
-import { TablerBrandTelegramIcon } from "../../core/Icons/TablerBrandTelegramIcon";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Divider from "../../core/Devider";
+import { FaInstagram, FaTelegram, FaTwitter, FaYoutube } from "react-icons/fa6";
 
 interface SectionFooterProps {
   localization: Dictionary;
@@ -18,10 +15,10 @@ export default function SectionFooter({ localization, maxWidth = "1200px" }: Sec
   const containerClass = `mx-auto box-border w-full max-w-[${maxWidth}]`;
 
   const socialLinks = [
-    { href: "https://x.com/dojomleh", label: "Twitter profile", Icon: LucideTwitterIcon },
-    { href: "https://t.me/dojomleh", label: "Telegram channel", Icon: TablerBrandTelegramIcon },
-    { href: "https://www.youtube.com/@dojomleh", label: "YouTube channel", Icon: LucideYoutubeIcon },
-    { href: "https://www.instagram.com/dojomleh/", label: "Instagram profile", Icon: LucideInstagramIcon },
+    { href: "https://x.com/dojomleh", label: "Twitter profile", Icon: FaTwitter },
+    { href: "https://t.me/dojomleh", label: "Telegram channel", Icon: FaTelegram },
+    { href: "https://www.youtube.com/@dojomleh", label: "YouTube channel", Icon: FaYoutube },
+    { href: "https://www.instagram.com/dojomleh/", label: "Instagram profile", Icon: FaInstagram },
   ];
 
   return (
@@ -46,9 +43,9 @@ export default function SectionFooter({ localization, maxWidth = "1200px" }: Sec
                   aria-label={label}
                   rel="noopener noreferrer"
                   target="_blank"
-                  className="w-6 h-6 text-current hover:text-[#7478f8] transition-transform duration-200 hover:scale-110"
+                  className="w-8 h-8 text-current hover:text-[#7478f8] transition-transform duration-200 hover:scale-110"
                 >
-                  <Icon />
+                  <Icon size={24}/>
                 </a>
               ))}
             </div>

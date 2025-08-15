@@ -23,7 +23,7 @@ html {
 
 @font-face {
   font-family: Vazirmatn;
-  src: url('/fonts/webfonts/Vazirmatn-Thin.woff2') format('woff2');
+  src: url('/assets/fonts/webfonts/Vazirmatn-Thin.woff2') format('woff2');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -31,7 +31,7 @@ html {
 
 @font-face {
   font-family: Vazirmatn;
-  src: url('/fonts/webfonts/Vazirmatn-ExtraLight.woff2') format('woff2');
+  src: url('/assets/fonts/webfonts/Vazirmatn-ExtraLight.woff2') format('woff2');
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -39,7 +39,7 @@ html {
 
 @font-face {
   font-family: Vazirmatn;
-  src: url('/fonts/webfonts/Vazirmatn-Light.woff2') format('woff2');
+  src: url('/assets/fonts/webfonts/Vazirmatn-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -47,7 +47,7 @@ html {
 
 @font-face {
   font-family: Vazirmatn;
-  src: url('/fonts/webfonts/Vazirmatn-Regular.woff2') format('woff2');
+  src: url('/assets/fonts/webfonts/Vazirmatn-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -55,7 +55,7 @@ html {
 
 @font-face {
   font-family: Vazirmatn;
-  src: url('/fonts/webfonts/Vazirmatn-Medium.woff2') format('woff2');
+  src: url('/assets/fonts/webfonts/Vazirmatn-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -63,7 +63,7 @@ html {
 
 @font-face {
   font-family: Vazirmatn;
-  src: url('/fonts/webfonts/Vazirmatn-SemiBold.woff2') format('woff2');
+  src: url('/assets/fonts/webfonts/Vazirmatn-SemiBold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -71,7 +71,7 @@ html {
 
 @font-face {
   font-family: Vazirmatn;
-  src: url('/fonts/webfonts/Vazirmatn-Bold.woff2') format('woff2');
+  src: url('/assets/fonts/webfonts/Vazirmatn-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -79,7 +79,7 @@ html {
 
 @font-face {
   font-family: Vazirmatn;
-  src: url('/fonts/webfonts/Vazirmatn-ExtraBold.woff2') format('woff2');
+  src: url('/assets/fonts/webfonts/Vazirmatn-ExtraBold.woff2') format('woff2');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -87,7 +87,7 @@ html {
 
 @font-face {
   font-family: Vazirmatn;
-  src: url('/fonts/webfonts/Vazirmatn-Black.woff2') format('woff2');
+  src: url('/assets/fonts/webfonts/Vazirmatn-Black.woff2') format('woff2');
   font-weight: 900;
   font-style: normal;
   font-display: swap;

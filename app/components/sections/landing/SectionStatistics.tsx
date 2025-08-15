@@ -9,7 +9,7 @@ import { Dictionary } from '@/lib/dictionary-types'
 import {
   ArrowUpRightIcon,
 } from "@heroicons/react/24/outline";
-import { getHeroIcon } from '../../core/Icons/IconAsString';
+import { getHeroIcon } from '../../core/IconAsString';
 
 interface SectionStatisticsProps {
   localization: Dictionary;

@@ -7,10 +7,10 @@ import SectionChallenges from "../components/sections/landing/SectionChallenges"
 import SectionSubscription from "../components/sections/landing/SectionSubscription";
 import SectionFooter from "../components/sections/landing/SectionFooter";
 import SectionRecentContents from "../components/sections/landing/SectionRecentContents";
-import KBar from "../components/core/HeaderNavigation/KBar";
 import { Navbar } from "../components/core/HeaderNavigation/Navbar";
 import SectionDownload from "../components/sections/landing/SectionDownload";
 import getNavigationLinks from "../components/core/HeaderNavigation/Links";
+import FinisherHeader from "../components/core/FinisherHeader";
 
 
 export default async function Page(props: {
@@ -19,10 +19,21 @@ export default async function Page(props: {
   const { lang } = await props.params;
   const localization = await getDictionary(lang);
 
-  return <div>
-    <Navbar localization={localization}  menuLinks={getNavigationLinks({localization})}/>
-    <main>
-      <SectionCallToAction localization={localization} />
+  return  <main>
+      {/* <FinisherHeader
+        options={{
+          count: 6,
+          size: { min: 1100, max: 1300, pulse: 0 },
+          // colors: { background: "#9138e5", particles: ["#6bd6ff", "#ffcb57", "#ff333d"] },
+          blending: "color",
+          colors: { background: "#9138e5",  particles: [ "#E8DFFF",  "#FFFFFF",  "#FFF9D6" ],  },
+          // blending: "screen",
+          skew: 0,
+          shapes: ["c"],
+        }}> */}
+        <Navbar localization={localization} backgroundColor={"#f7f7f9"} menuLinks={getNavigationLinks({ localization })} />
+        <SectionCallToAction localization={localization} />
+      {/* </FinisherHeader> */}
       <SectionRecentContents localization={localization} />
       <SectionChallenges localization={localization} />
       <SectionMostViewed localization={localization} />
@@ -39,5 +50,4 @@ export default async function Page(props: {
       <SectionSubscription localization={localization} />
       <SectionFooter localization={localization} />
     </main>
-  </div>
 }

@@ -1,4 +1,4 @@
-import { CheckIcon, SparklesIcon } from '@heroicons/react/24/outline';
+import { CheckIcon } from '@heroicons/react/24/outline';
 import Card from '../../core/Cards/Card';
 import CardGrid from '../../core/Cards/CardGrid';
 import SectionBase from "./SectionBase";

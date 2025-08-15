@@ -12,7 +12,6 @@ export default async function SectionCallToAction({ localization }: { localizati
         highlightedTitle={localization.callToAction.body.highlightedTitle}
         description={localization.callToAction.body.description}
         isStriped>
-
         <div className="flex flex-col justify-space-between">
             <div className="flex justify-center gap-8 mb-16">
                 <CustomButton

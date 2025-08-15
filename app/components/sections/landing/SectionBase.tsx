@@ -1,8 +1,10 @@
 import { JSX } from "react";
+import FinisherHeader from "../../core/FinisherHeader";
 
 interface SectionBaseProps {
   title: string;
   highlightedTitle?: string;
+  backgroundColor?: string;
   description: string;
   fullHeight?: boolean;
   isStriped?: boolean;
@@ -10,6 +12,7 @@ interface SectionBaseProps {
   headingLevel?: 1 | 2 | 3 | 4 | 5 | 6;
   sectionId?: string;
   ariaLabel?: string;
+  animated?: boolean;
 }
 
 export default function SectionBase({
@@ -22,11 +25,13 @@ export default function SectionBase({
   headingLevel = 2,
   sectionId,
   ariaLabel,
+  animated,
+  backgroundColor,
 }: SectionBaseProps) {
-  const backgroundColor = isStriped ? "#f7f7f9" : "#fff";
+  backgroundColor = isStriped ? "#f7f7f9" : backgroundColor;
   const HeadingTag = `h${headingLevel}` as keyof JSX.IntrinsicElements;
 
-  return (
+  const sectionTag =
     <section
       id={sectionId}
       aria-label={ariaLabel || title}
@@ -57,6 +62,20 @@ export default function SectionBase({
       </header>
 
       {children && <div className="mt-8">{children}</div>}
-    </section>
-  );
+
+    </section>;
+
+  if (animated) return (<FinisherHeader
+    options={{
+      count: 6,
+      size: { min: 1100, max: 1300, pulse: 0 },
+      colors: { background: "#9138e5", particles: ["#6bd6ff", "#ffcb57", "#ff333d"] },
+      blending: "overlay",
+      skew: -2,
+      shapes: ["c"],
+    }}>
+    {sectionTag}
+  </FinisherHeader>);
+
+  return (sectionTag);
 }

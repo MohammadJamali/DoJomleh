@@ -33,34 +33,53 @@ export interface ExtraLink {
 
 export const MenuLinks = ({ menuLinks }: MenuLinksProps) => {
   return (
-    <ul className="flex px-1 lg:px-4">
+    <ul className="flex px-1 lg:px-4 gap-2">
       {menuLinks.map((link) => (
-        <div className="relative group" key={link.name}>{
-          link.link
-            ? <Link href={link.link} className="flex items-center">
-              <li className="
-                p-2 font-semibold rounded-lg cursor-pointer 
-                lg:px-4 text-slate-500 hover:text-slate-700 
-                hover:bg-slate-200">
+        <div className="relative group" key={link.name}>
+          {link.link ? (
+            <Link href={link.link} className="flex items-center">
+              <li
+                className="
+                  p-2 font-semibold rounded-lg cursor-pointer lg:px-4
+                  text-slate-700 hover:text-slate-900
+                  bg-white/10 backdrop-blur-md
+                  border border-white/10
+                  transition-all duration-300
+                  hover:bg-white"
+              // style={{
+              //   WebkitBackdropFilter: "blur(10px)",
+              //   backdropFilter: "blur(10px)",
+              // }}
+              >
                 {link.name}
               </li>
             </Link>
-            : <li className="
-              p-2 font-semibold rounded-lg cursor-pointer 
-              lg:px-4 text-slate-500 hover:text-slate-700 
-              hover:bg-slate-200 ">
+          ) : (
+            <li
+              className="
+                p-2 font-semibold rounded-lg cursor-pointer lg:px-4
+                text-slate-700 hover:text-slate-900
+                bg-white/10 backdrop-blur-md
+                border border-white/10
+                transition-all duration-300
+                hover:bg-white"
+            // style={{
+            //   WebkitBackdropFilter: "blur(10px)",
+            //   backdropFilter: "blur(10px)",
+            // }}
+            >
               {link.name}
             </li>
-        }
-          {
-            link.subLinks &&
-            <div className="hidden group-hover:block">
+          )}
+
+          {link.subLinks && (
+            <div className="hidden group-hover:block z-50">
               <SubLinksBox
                 subLinks={link.subLinks}
                 extraLinks={link.extraLinks}
               />
             </div>
-          }
+          )}
         </div>
       ))}
     </ul>

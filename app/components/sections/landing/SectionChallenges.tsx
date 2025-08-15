@@ -1,4 +1,4 @@
-import { getHeroIcon } from "../../core/Icons/IconAsString";
+import { getHeroIcon } from "../../core/IconAsString";
 import SectionBase from "./SectionBase";
 import PresentationCard from "../../core/PresentationCard";
 import { Dictionary } from "@/lib/dictionary-types";

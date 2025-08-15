@@ -33,13 +33,13 @@ export function middleware(request: NextRequest) {
   //   [
   //     '/manifest.json',
   //     '/favicon.ico',
-  //     'fonts/webfonts',
+  //     'assets/fonts/webfonts',
   //     '/images',
   //   ].includes(pathname)
   // )
   //   return
-  if (pathname.includes("fonts/webfonts")) return;
   if (pathname.includes("images")) return;
+  if (pathname.includes("assets")) return;
 
   // Check if there is any supported locale in the pathname
   const pathnameIsMissingLocale = i18n.locales.every(
