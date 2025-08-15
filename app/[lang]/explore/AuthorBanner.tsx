@@ -47,11 +47,10 @@ export default function AuthorBanner({ localization, userData }: {
             <button
               key={id}
               onClick={() => setTab(id as any)}
-              className={`flex-1 py-2 text-sm font-medium transition-all duration-300 ${
-                tab === id
+              className={`flex-1 py-2 text-sm font-medium transition-all duration-300 ${tab === id
                   ? "border-b-2 border-blue-500 text-blue-600"
                   : "text-gray-500 hover:bg-gray-50"
-              }`}
+                }`}
             >
               {label}
             </button>
@@ -65,7 +64,13 @@ export default function AuthorBanner({ localization, userData }: {
         >
           {tab === "activities" ? (
             <section className="p-4 space-y-4">
-              {userData.activities.map(({ id, user, action, time, status }) => (
+              {userData.activities.map(({ id, user, action, time, status }: {
+                id: number;
+                user: string;
+                action: string;
+                time: string;
+                status: string | string[] | null;
+              }) => (
                 <div key={id} className="flex gap-3">
                   <div className="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 text-xs">
                     <FaBell />
