@@ -11,11 +11,12 @@ export default async function SectionCallToAction({ localization }: { localizati
         title={localization.callToAction.body.title}
         highlightedTitle={localization.callToAction.body.highlightedTitle}
         description={localization.callToAction.body.description}
-        isStriped>
+        isStriped
+        >
         <div className="flex flex-col justify-space-between">
             <div className="flex justify-center gap-8 mb-16">
                 <CustomButton
-                    href="/invest"
+                    href="#summary-request"
                     title={localization.callToAction.body.actions.cta}
                     color={0xfff}
                     backgroundColor={0x7478F8}

@@ -3,6 +3,8 @@ import SectionBase from "./SectionBase";
 import { Dictionary } from "@/lib/dictionary-types";
 import CardGrid from "../../core/Cards/CardGrid";
 import Card from "../../core/Cards/Card";
+import { CustomButton } from "../../core/CustomButton/CustomButton";
+import { PiDotsThreeBold } from "react-icons/pi";
 
 export default function SectionMostViewed({ localization }: { localization: Dictionary }) {
     return <SectionBase
@@ -24,5 +26,17 @@ export default function SectionMostViewed({ localization }: { localization: Dict
                         iconStart: false,
                     }} />))
         }</CardGrid>
+        
+        <div className='flex mt-18 w-full justify-center'>
+            <CustomButton
+                href="explore"
+                iconBackgroundColor={0xfff}
+                Icon={PiDotsThreeBold}
+                title={localization.topPosts.cta}
+                iconStart={localization.rtl}
+                borderColor={0x0}
+                borderStyle="solid"
+                borderWidth={1} />
+        </div>
     </SectionBase>
 }

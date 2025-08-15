@@ -75,17 +75,17 @@ export default function SectionFooter({ localization, maxWidth = "1200px" }: Sec
         <p itemProp="copyrightNotice">{localization.footer.copywrite}</p>
         <ul className="flex flex-wrap gap-4">
           <li>
-            <Link href="/privacy-policy" aria-label="Privacy policy" itemProp="url" className="hover:underline">
+            <Link href="privacy-policy" aria-label="Privacy policy" itemProp="url" className="hover:underline">
               {localization.footer.privacyPolicy}
             </Link>
           </li>
           <li>
-            <Link href="/terms-of-use" aria-label="Terms of use" itemProp="url" className="hover:underline">
+            <Link href="terms-of-use" aria-label="Terms of use" itemProp="url" className="hover:underline">
               {localization.footer.termsOfUse}
             </Link>
           </li>
           <li>
-            <Link href="/sitemap" aria-label="Site map" itemProp="url" className="hover:underline">
+            <Link href="sitemap" aria-label="Site map" itemProp="url" className="hover:underline">
               {localization.footer.siteMap}
             </Link>
           </li>
