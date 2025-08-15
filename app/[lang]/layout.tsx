@@ -26,25 +26,28 @@ export async function generateStaticParams() {
 }
 
 export default async function Root(props: {
-  children: React.ReactNode
+  children: React.ReactNode;
+  modal: React.ReactNode;
   params: Promise<{ lang: Locale }>
 }) {
   const { lang } = await props.params;
   const { children } = props;
 
   let dir = "ltr";
-  let font: CSSProperties  = {};
+  let font: CSSProperties = {};
   if (lang === "fa") {
     dir = "rtl";
-    font = {fontFamily: "Vazirmatn"}
+    font = { fontFamily: "Vazirmatn" }
   }
 
   return (
     <html lang={lang} dir={dir} style={font}>
       <Head>
-        <link rel="canonical"  />
+        <link rel="canonical" />
       </Head>
-      <body>{children}</body>
+      <body>
+        {children}
+      </body>
     </html>
   );
 }

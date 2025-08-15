@@ -5,6 +5,7 @@ import CardGrid from "../../core/Cards/CardGrid";
 import Card from "../../core/Cards/Card";
 import { CustomButton } from "../../core/CustomButton/CustomButton";
 import { PiDotsThreeBold } from "react-icons/pi";
+import Link from "next/link";
 
 export default function SectionMostViewed({ localization }: { localization: Dictionary }) {
     return <SectionBase
@@ -18,7 +19,10 @@ export default function SectionMostViewed({ localization }: { localization: Dict
                     bannerImage={post.image}
                     title={post.title}
                     description={post.description}
-                    href="#"
+                    href={{
+                        pathname: `/${localization.lang}/explore`,
+                        query: { summaryId: post.id },
+                    }}
                     footerButton={{
                         Icon: ArrowUpRightIcon,
                         title: localization.topPosts.cta,
@@ -26,7 +30,7 @@ export default function SectionMostViewed({ localization }: { localization: Dict
                         iconStart: false,
                     }} />))
         }</CardGrid>
-        
+
         <div className='flex mt-18 w-full justify-center'>
             <CustomButton
                 href="explore"

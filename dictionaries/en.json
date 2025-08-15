@@ -247,7 +247,7 @@
     "buttons": [
       {
         "name": "Download App",
-        "href": "#download"
+        "href": "/#download"
       },
       {
         "name": "Invest In Us",

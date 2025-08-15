@@ -7,6 +7,9 @@ import ShimmerCard from "@/app/components/core/ShimmerCard";
 import TagGroup from "@/app/components/core/TagGroup";
 import { Dictionary } from "@/lib/dictionary-types";
 import { useEffect, useState } from "react";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import rehypeStringify from "rehype-stringify";
 import {
     FaChevronLeft, FaChevronRight, FaMagnifyingGlass,
     FaPodcast,
@@ -19,6 +22,8 @@ import { IoFilter } from "react-icons/io5";
 import ArticleCard from "./components/ArticleCard";
 import SectionFooter from "@/app/components/sections/landing/SectionFooter";
 import Divider from "@/app/components/core/Devider";
+import { remark } from "remark";
+import SummaryView  from "../summary/SummaryView";
 
 const User = dynamic(() => import("../../components/core/HeaderNavigation/components/User"), { ssr: false });
 
@@ -44,7 +49,7 @@ function Sidebar({ localization }: { localization: Dictionary }) {
 
     return (
         <div className={`
-                bg-white border-gray-200
+                 border-gray-200
                 border-b md:border-b-0 md:border-r
             `}>
             <aside
@@ -137,8 +142,9 @@ function Sidebar({ localization }: { localization: Dictionary }) {
 }
 
 
-export default function Explore({ localization }: {
+export default function Explore({ localization, summaryId }: {
     localization: Dictionary;
+    summaryId?: string;
 }) {
     const [search, setSearch] = useState("");
     const [loadingState, setLoadingState] = useState<"idle" | "typing" | "loading" | "done">("idle");
@@ -183,15 +189,15 @@ export default function Explore({ localization }: {
     }, [search]);
 
     // return (<div style={{ backgroundColor: "#f7f7f9" }}>
-    return (<div >
+     return (<div>
         <div className="flex flex-col md:flex-row text-gray-900">
             <Sidebar localization={localization} />
 
             {/* Main Content */}
-            <main className="flex-1 bg-white">
+            <main className="flex-1">
                 {/* Search & User */}
                 <header className="flex h-20 px-4 sm:px-6 border-b border-gray-200 justify-between items-center gap-4 sm:gap-0">
-                    <div className="relative w-full md:w-1/2">
+                    <div className="bg-white relative w-full md:w-1/2">
                         <input
                             type="text"
                             placeholder={`${localization.explore.search} ...`}
@@ -247,7 +253,19 @@ export default function Explore({ localization }: {
                     <section className="grid place-content-start m-4 gap-8" style={{
                         gridTemplateColumns: `repeat(auto-fit, minmax(400px, 1fr))`,
                     }}>
-                        {loadingState === "loading" ? (
+                        {summaryId &&  <SummaryView data={{
+                            image: "/images/ramzali.jpg",
+                            banner: "/images/robots-banner.jpg",
+                            author: { name: "Mohammad" },
+                            url: localization.summary.urlLabel,
+                            descriptionLabel: localization.summary.abstractLabel,
+                            authorLabel: localization.summary.authorLabel,
+                            title: localization.summary.title,
+                            createdAt: localization.summary.createdAt,
+                            reminderText: localization.summary.reminder,
+                            contentHtml: "Content...",
+                        }} localization={localization} id={summaryId} />}
+                        {!summaryId &&  (loadingState === "loading" ? (
                             <>
                                 <ShimmerCard />
                                 <ShimmerCard />
@@ -259,7 +277,8 @@ export default function Explore({ localization }: {
                                     article={article}
                                     localization={localization} />
                             )
-                        )}
+                           
+                        ))}
                     </section>
                 </div>
             </main>

@@ -20,7 +20,7 @@ export default function AuthorBanner({ localization, userData }: {
 
   return (
     <main className="font-sans">
-      <article className="bg-white overflow-hidden">
+      <article className="overflow-hidden">
         {/* Header */}
         <section className="p-4 text-center">
           <Image src={userData.avatar} alt={userData.name} width={64} height={64} className="rounded-full mx-auto" />

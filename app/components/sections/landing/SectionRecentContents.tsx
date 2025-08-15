@@ -24,7 +24,10 @@ export default function SectionRecentContents({ localization }: { localization: 
                         : undefined
                 }
                 date={post.date ? new Date(post.date) : undefined}
-                href="#"
+                href={{
+                        pathname: `/${localization.lang}/explore`,
+                        query: { summaryId: post.id },
+                }}
                 features={
                     post.features
                         ? post.features.map((feature) => ({

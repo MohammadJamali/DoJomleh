@@ -10,6 +10,7 @@ import SectionRecentContents from "../components/sections/landing/SectionRecentC
 import { Navbar } from "../components/core/HeaderNavigation/Navbar";
 import SectionDownload from "../components/sections/landing/SectionDownload";
 import getNavigationLinks from "../components/core/HeaderNavigation/Links";
+import FinisherHeader from "../components/core/FinisherHeader";
 
 
 export default async function Page(props: {
@@ -19,13 +20,13 @@ export default async function Page(props: {
   const localization = await getDictionary(lang);
 
   return <main>
-    {/* <FinisherHeader
+    <FinisherHeader
       options={{
         count: 6,
         size: { min: 1100, max: 1300, pulse: 0 },
         // colors: { background: "#9138e5", particles: ["#6bd6ff", "#ffcb57", "#ff333d"] },
         blending: "color",
-        colors: { background: "#9138e5", particles: ["#E8DFFF", "#FFFFFF", "#FFF9D6"], },
+        colors: { background: "#af74e6", particles: ["#E8DFFF", "#FFFFFF", "#FFF9D6"], },
         // blending: "screen",
         skew: 0,
         shapes: ["c"],
@@ -33,14 +34,14 @@ export default async function Page(props: {
           center: 1,
           edge: 0
         }
-      }}> */}
+      }}>
       <Navbar
         localization={localization}
-        backgroundColor={"#f7f7f9"} 
+        // backgroundColor={"#f7f7f9"} 
         menuLinks={getNavigationLinks({ localization })}
       />
       <SectionCallToAction localization={localization} />
-    {/* </FinisherHeader> */}
+    </FinisherHeader>
     <SectionRecentContents localization={localization} />
     <SectionChallenges localization={localization} />
     <SectionMostViewed localization={localization} />

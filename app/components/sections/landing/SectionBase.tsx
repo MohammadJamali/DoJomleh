@@ -3,8 +3,11 @@ import FinisherHeader from "../../core/FinisherHeader";
 
 interface SectionBaseProps {
   title: string;
+  titleColor?: string;
   highlightedTitle?: string;
+  highlightedTitleColor?: string;
   backgroundColor?: string;
+  descriptionColor?: string;
   description: string;
   fullHeight?: boolean;
   isStriped?: boolean;
@@ -17,8 +20,11 @@ interface SectionBaseProps {
 
 export default function SectionBase({
   title,
+  titleColor = "#737377",
   highlightedTitle,
+  highlightedTitleColor = "#6C63FF",
   description,
+  descriptionColor = "#737377",
   fullHeight = false,
   isStriped = false,
   children,
@@ -51,12 +57,17 @@ export default function SectionBase({
           {highlightedTitle && (
             <>
               <br />
-              <span className="text-[#6C63FF] font-bold">{highlightedTitle}</span>
+              <span className="font-bold" style={{
+                color: highlightedTitleColor
+              }}>{highlightedTitle}</span>
             </>
           )}
         </HeadingTag>
 
-        <p className="text-center text-[#737377] text-base max-w-[600px] whitespace-pre-wrap">
+        <p className="text-center text-base max-w-[600px] whitespace-pre-wrap"
+        style={{
+          color: descriptionColor
+        }}>
           {description}
         </p>
       </header>

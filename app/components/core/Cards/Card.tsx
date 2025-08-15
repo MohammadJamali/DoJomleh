@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CSSProperties, SVGProps } from "react";
 import { CustomButton, CustomButtonProps } from "../CustomButton/CustomButton";
+import { Url } from "next/dist/shared/lib/router/router";
 
 export interface Feature {
   Icon: React.ComponentType<SVGProps<SVGSVGElement>>;
@@ -19,7 +20,7 @@ export interface CardProps {
   showFooterTexture?: boolean;
   backgroundColor?: string;
   bannerImage?: string;
-  href?: string;
+  href?: Url;
   profilePicture?: string;
   title: string;
   description: string;
