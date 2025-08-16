@@ -8,7 +8,7 @@ import { MobileMenu } from "./components/MobileMenu/MobileMenu";
 import { Dictionary } from '@/lib/dictionary-types';
 import dynamic from "next/dynamic";
 
-const User = dynamic(() => import("./components/User"), { ssr: false });
+const User = dynamic(() => import("./Wallet/User"), { ssr: false });
 
 interface NavbarProps {
   localization: Dictionary;

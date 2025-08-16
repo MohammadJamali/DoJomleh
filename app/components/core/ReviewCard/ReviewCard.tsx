@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import styles from "./ReviewCard.module.css"; // Keep animations here
-import { LucideQuoteIcon } from "@/app/components/core/Icons/LucideQuoteIcon";
 import { FaQuoteLeft } from "react-icons/fa";
 
 interface ReviewCardProps {
@@ -32,9 +31,9 @@ export default function ReviewCard({
   return (
     <article
       className={`
-        relative max-w-[600px] mx-auto p-6 bg-white
+        relative -z-1 justify-self-center max-w-[600px] m-6 p-6 bg-white
         rounded-[32px] shadow-[0_4px_32px_rgba(0,0,0,0.05)]
-        font-sans overflow-hidden opacity-0 translate-x-[20px]
+        font-sans overflow-hidden opacity-0 
         ${localVisible ? styles.enter : styles.exit}
       `}
       onAnimationEnd={() => {
@@ -44,24 +43,24 @@ export default function ReviewCard({
       }}
     >
       <header>
-        <p className="text-indigo-600 text-sm font-bold uppercase tracking-wider mb-2 relative z-[1]">
+        <p className="text-indigo-600 text-sm font-bold uppercase tracking-wider mb-2 relative">
           {label}
         </p>
-        <h2 className="text-gray-900 text-2xl font-bold leading-[1.3] mb-6 relative z-[1]">
+        <h2 className="text-gray-900 text-2xl font-bold leading-[1.3] mb-6 relative">
           {review.title}
         </h2>
       </header>
 
       <blockquote
         className={`
-          text-gray-600 text-lg leading-7 italic mb-8 relative z-[1]
+          text-gray-600 text-lg leading-7 italic mb-8 relative
           ${dir === "rtl" ? "pr-4 border-r-4 border-gray-200" : "pl-4 border-l-4 border-gray-200"}
         `}
       >
         {review.quote}
       </blockquote>
 
-      <div className="flex items-center gap-4 relative z-[1]">
+      <div className="flex items-center gap-4 relative">
         <div className="w-20 h-20">
           <img
             src={review.avatar}

@@ -14,8 +14,7 @@ export default async function SectionCallToAction({ localization }: { localizati
         highlightedTitleColor={"#4c42ff"}
         descriptionColor={"#222"}
         // isStriped
-        >
-        <div className="flex flex-col justify-space-between">
+    >
             <div className="flex justify-center gap-8 mb-16">
                 <CustomButton
                     href="#summary-request"
@@ -36,8 +35,6 @@ export default async function SectionCallToAction({ localization }: { localizati
                     borderStyle="solid"
                     borderWidth={1} />
             </div>
-
             <SectionReviewCarousel localization={localization} />
-        </div>
     </SectionBase>
 }

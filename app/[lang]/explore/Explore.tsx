@@ -25,7 +25,7 @@ import Divider from "@/app/components/core/Devider";
 import { remark } from "remark";
 import SummaryView  from "../summary/SummaryView";
 
-const User = dynamic(() => import("../../components/core/HeaderNavigation/components/User"), { ssr: false });
+const User = dynamic(() => import("../../components/core/HeaderNavigation/components/User.2tsx"), { ssr: false });
 
 
 function Sidebar({ localization }: { localization: Dictionary }) {

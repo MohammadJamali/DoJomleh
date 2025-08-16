@@ -20,13 +20,14 @@ export default async function Page(props: {
   const localization = await getDictionary(lang);
 
   return <main>
-    <FinisherHeader
+    {/* <FinisherHeader
       options={{
-        count: 6,
+        count: 8,
         size: { min: 1100, max: 1300, pulse: 0 },
         // colors: { background: "#9138e5", particles: ["#6bd6ff", "#ffcb57", "#ff333d"] },
         blending: "color",
-        colors: { background: "#af74e6", particles: ["#E8DFFF", "#FFFFFF", "#FFF9D6"], },
+        colors: { background: "#6A3DF0", particles: ["#E8DFFF", "#FFFFFF", "#FFF9D6"], },
+        // colors: { background: "#6A3DF0",  particles: ["#ffd6e0", "#b5deff", "#fff5ba"]   },
         // blending: "screen",
         skew: 0,
         shapes: ["c"],
@@ -34,14 +35,23 @@ export default async function Page(props: {
           center: 1,
           edge: 0
         }
-      }}>
+      }}> */}
+    <div style={{
+      position: "relative",
+      display: "block",
+      width: "100%",
+      height: "100%",
+      backgroundColor: "#f7f7f9",
+      zIndex: 0
+    }}>
       <Navbar
         localization={localization}
-        // backgroundColor={"#f7f7f9"} 
+        backgroundColor={"#f7f7f9"}
         menuLinks={getNavigationLinks({ localization })}
       />
       <SectionCallToAction localization={localization} />
-    </FinisherHeader>
+    </div>
+    {/* </FinisherHeader> */}
     <SectionRecentContents localization={localization} />
     <SectionChallenges localization={localization} />
     <SectionMostViewed localization={localization} />
